@@ -146,3 +146,14 @@ Phase 2 is COMPLETE and VERIFIED:
 - GitHub pushed and verified: https://github.com/jdanwmusic/servisgitar (commit 057c3d9, branch main)
 
 Move to Phase 3 (Deep Knowledge — Brand/Model + advanced repair + restoration) when ready, or stop and review. Per user instructions (FREEZE mode for hardcasegitar maintained; EVIDENCE-ONLY mode completed with real evidence).
+
+
+=== PHASE 3 — DEEP KNOWLEDGE (2026-08-28) ===
+- Brand/Model entities extended with Source-required fields, variant support, unknownFields tracking
+- 5 Brand nodes (Fender, Gibson, Yamaha) + 5 Model nodes (Strat, Tele, Les Paul, FG800, Pacifica 112V)
+- Page templates: /brand/[brand] + /model/[brand]/[model]
+- Evidence: model specs sourced only from manufacturer docs (Fender/Gibson/Yamaha)
+- Safety: serviceNotes separate low-risk/professional; structural/crack repair = professional
+- Build: 25 pages (17 + 3 brand + 5 model), static export verified
+- Hardcase freeze: ffd38de (verified)
+- No deployment; no autonomous design/content changes without approval

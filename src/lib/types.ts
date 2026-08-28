@@ -152,18 +152,38 @@ export interface Brand {
   name: string;
   countryOfOrigin?: string;
   foundedYear?: number;
+  officialWebsite?: string;
   description: string;
   modelIds: string[];
+  sources: Source[];
+}
+
+export interface ModelVariant {
+  id: string; // "fender-stratocaster-1957", "fender-stratocaster-1979-cts"
+  label: string; // "1957 Vintage Reissue", "1979 with CTS Pots"
+  productionEra?: string; // "1957-1965", "1979-1981"
+  characteristics: string[];
+  sourceIds: string[];
 }
 
 export interface Model {
-  id: string; // "fender-stratocaster-1957", "yamaha-fg800"
+  id: string; // "fender-stratocaster", "yamaha-fg800"
   name: string;
   brandId: string; // → Brand.id
   category: InstrumentCategorySlug;
   description: string;
-  specifications: Record<string, string>;
+  variants?: ModelVariant[]; // optional, only if variants matter for service
+  scaleLength?: string; // "25.5 in", "648 mm" — only if source-verified
+  bridge?: string; // "Hardtail 6-screw", "Tremolo" — only if source-verified
+  nut?: string; // "Bone, 42 mm" — only if source-verified
+  fretboard?: string; // "Rosewood, 7.25 in radius" — only if source-verified
+  pickups?: string; // "3x single-coil" — only if source-verified
+  electronics?: string; // "1 volume, 2 tone, 5-way switch" — only if source-verified
+  trussRodAccess?: string; // "Headstock, 4mm hex" — only if source-verified
+  serviceNotes?: string; // technical service-relevant notes (only with source)
+  sources: Source[];
   relatedArticleIds: string[];
+  unknownFields: string[]; // track what we DON'T know explicitly
 }
 
 export interface CaseStudy {
@@ -195,6 +215,8 @@ export interface ArticleBase {
   readingMinutes: number;
   status: ContentStatus;
   related: string[]; // article IDs
+  brandIds?: string[]; // linked brands
+  modelIds?: string[]; // linked models
   sources: Source[];
   updatedAt: string; // ISO date
 }
@@ -323,7 +345,10 @@ export type RelationshipType =
   | "conflictsWith"
   // entity references (Phase 1.5 added)
   | "hasComponent" // Instrument → Component
-  | "performedOn"; // Service → Instrument
+  | "performedOn" // Service → Instrument
+  | "isModelOf" // Model → Instrument
+  | "usesBrand" // Model → Brand
+  | "variantOf"; // ModelVariant → Model
 
 export interface Relationship {
   from: string;
