@@ -3,7 +3,7 @@
 Platform pengetahuan teknis berbahasa Indonesia untuk servis, setup, perawatan, dan restorasi gitar & bass.
 
 ## Status
-**Phase 1.5 — Architecture Hardening COMPLETE.** Foundation ready. Awaiting Phase 2 (Knowledge Core) approval.
+**Phase 2 — Knowledge Core COMPLETE.** 10 pilot articles, templates, JSON-LD, search, SEO verified.
 
 | Aspect | Status |
 |---|---|
@@ -17,8 +17,8 @@ Platform pengetahuan teknis berbahasa Indonesia untuk servis, setup, perawatan, 
 | Build | ✅ PASS (4 pages, 87KB shared JS) |
 | Type check | ✅ PASS |
 | Lint | ✅ PASS |
-| Git commit | ✅ local `4e23b8e` + Phase 1.5 pending |
-| Deploy | ❌ NOT YET (no push, no Cloudflare) |
+| Git commit | ✅ local `057c3d9` + pushed `main` (jdanwmusic/servisgitar) |
+| Deploy | ❌ NOT YET (Cloudflare — user-triggered) |
 
 ## Stack
 - Next.js 14.2.28 (App Router)
@@ -44,7 +44,7 @@ npm run build    # → dist/ (static export)
 
 ## Phase Roadmap
 - **Phase 1.5** ✅ Architecture hardening (this checkpoint)
-- **Phase 2** Knowledge Core (foundational articles, glossary, tools index, measurement guides)
+- **Phase 2** COMPLETE — 10 pilot articles (all 5 content types), templates, search, JSON-LD, sitemap (15 URLs)
 - **Phase 3** Deep Knowledge (brands, models, advanced techniques)
 - **Phase 4** Diagnostic Engine (interactive troubleshooting)
 - **Phase 5** JW Guitar Service integration (case studies, services, contact)
