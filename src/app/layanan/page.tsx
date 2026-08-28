@@ -78,6 +78,19 @@ export default function LayananPage() {
             </li>
           </ul>
         </div>
+        <div className="mt-6 pt-6 border-t border-brand-border">
+          <p className="text-sm text-brand-muted">
+            Butuh bantuan profesional?{" "}
+            <a href="/kontak" className="text-brand-accent hover:underline">
+              Hubungi JW Guitar Service
+            </a>
+            . Anda juga bisa{" "}
+            <a href="/panduan/apa-itu-setup-gitar" className="text-brand-accent hover:underline">
+              mempelajari panduan setup
+            </a>{" "}
+            untuk memahami dasar-dasar sebelum memutuskan layanan.
+          </p>
+        </div>
       </main>
       <Footer />
     </div>
