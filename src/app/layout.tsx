@@ -39,8 +39,7 @@ export const metadata: Metadata = {
     description: "Layanan servis gitar akustik, elektrik, dan bass profesional.",
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/icon.svg",
   },
 };
 
