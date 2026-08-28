@@ -179,6 +179,10 @@ export interface ModelVariant {
   id: string; // "fender-stratocaster-1957", "fender-stratocaster-1979-cts"
   label: string; // "1957 Vintage Reissue", "1979 with CTS Pots"
   productionEra?: string; // "1957-1965", "1979-1981"
+  seriesName?: string; // verified series name (e.g., "American Vintage II") — only if source-supported
+  configuration?: string; // verified pickup/bridge config (e.g., "SSS", "HSS") — only if source-supported
+  yearStart?: number; // ONLY if manufacturer docs specify production start; leave null if unknown
+  yearEnd?: number; // ONLY if manufacturer docs specify end; leave null if ongoing/unknown
   characteristics: string[];
   sourceIds: string[];
 }

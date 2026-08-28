@@ -25,7 +25,7 @@ export const RELATIONSHIPS: Relationship[] = [
   { from: "fender-stratocaster-american-vintage-ii-1957", to: "fender-stratocaster", type: "variantOf", weight: 1.0, bidirectional: false },
   { from: "fender-stratocaster-squier-affinity", to: "fender-stratocaster", type: "variantOf", weight: 1.0, bidirectional: false },
   // === hasComponent (Brand → Component) — only components with direct evidence ===
-  { from: "fender-stratocaster", to: "component-tremolo-6-screw", type: "hasComponent", weight: 1.0, bidirectional: false },
+  { from: "fender-stratocaster", to: "component-bridge-tremolo-6-screw", type: "hasComponent", weight: 1.0, bidirectional: false },
   { from: "fender-stratocaster", to: "component-truss-rod-headstock", type: "hasComponent", weight: 1.0, bidirectional: false },
   { from: "fender-telecaster", to: "component-bridge-hardtail-3-saddle", type: "hasComponent", weight: 1.0, bidirectional: false },
   { from: "gibson-les-paul", to: "component-tune-o-matic", type: "hasComponent", weight: 1.0, bidirectional: false },
@@ -42,7 +42,7 @@ export const RELATIONSHIPS: Relationship[] = [
   { from: "service-setup-dasar-gitar-elektrik", to: "tool-truss-rod-wrench", type: "requiresTool", weight: 1.0, bidirectional: false },
   // === measures (Measurement → Component) — what each measurement applies to ===
   { from: "measurement-neck-relief", to: "component-truss-rod-headstock", type: "measures", weight: 1.0, bidirectional: false },
-  { from: "measurement-action-at-12th-fret", to: "component-bridge", type: "measures", weight: 1.0, bidirectional: false },
+  { from: "measurement-action-at-12th-fret", to: "component-bridge-tremolo-6-screw", type: "measures", weight: 0.8, bidirectional: false },
 ];
 
 export const RELATIONSHIP_SOURCES: Record<string, Source> = {
