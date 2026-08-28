@@ -1,4 +1,5 @@
 import { ARTICLES_BY_SLUG } from "@/data/articles";
+import { BRAND_BY_ID, MODEL_BY_ID } from "@/data/brands-models";
 import { articleTitle, articleDescription } from "@/lib/seo-template";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import type { Metadata } from "next";
@@ -115,6 +116,41 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 })}
               </div>
             </section>
+
+            {a.brandIds && a.brandIds.length > 0 && (
+              <section className="mt-8 pt-8 border-t border-brand-border">
+                <h3 className="text-lg font-semibold mb-3">Brand Terkait</h3>
+                <div className="flex flex-wrap gap-2">
+                  {a.brandIds.map((bid) => {
+                    const b = BRAND_BY_ID[bid];
+                    if (!b) return null;
+                    return (
+                      <Link key={bid} href={`/brand/${b.id}`} className="rounded-md border border-brand-border px-3 py-1.5 text-sm text-brand-text hover:border-brand-accent hover:text-brand-accent transition-colors">
+                        {b.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
+
+            {a.modelIds && a.modelIds.length > 0 && (
+              <section className="mt-8 pt-8 border-t border-brand-border">
+                <h3 className="text-lg font-semibold mb-3">Model Terkait</h3>
+                <div className="flex flex-wrap gap-2">
+                  {a.modelIds.map((mid) => {
+                    const m = MODEL_BY_ID[mid];
+                    if (!m) return null;
+                    const brandId = m.brandId || (m.id.includes("strat") ? "fender" : m.id.includes("tele") ? "fender" : m.id.includes("les-paul") ? "gibson" : m.id);
+                    return (
+                      <Link key={mid} href={`/model/${brandId}/${m.id}`} className="rounded-md border border-brand-border px-3 py-1.5 text-sm text-brand-text hover:border-brand-accent hover:text-brand-accent transition-colors">
+                        {m.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
 
             {/* Sources */}
             <section className="mt-8 pt-8 border-t border-brand-border">
