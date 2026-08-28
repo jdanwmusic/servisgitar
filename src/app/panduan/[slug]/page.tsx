@@ -4,6 +4,7 @@ import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import type { Metadata } from "next";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const slugs = Object.keys(ARTICLES_BY_SLUG);
@@ -90,12 +91,28 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             {/* Internal links (related) */}
             <section className="mt-12 pt-8 border-t border-brand-border">
               <h3 className="text-lg font-semibold mb-4">Topik Terkait</h3>
-              <div className="flex flex-wrap gap-2">
-                {a.related.map((slug) => (
-                  <a key={slug} href={`/panduan/${slug}`} className="rounded-md border border-brand-border px-3 py-1.5 text-sm text-brand-text hover:border-brand-accent hover:text-brand-accent transition-colors">
-                    {slug.replace(/-/g, " ")}
-                  </a>
-                ))}
+              <p className="text-sm text-brand-muted mb-4">
+                Artikel ini memiliki Topik Terkait berupa artikel lain diServisGitar.com.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {a.related.map((slug) => {
+                  const rel = ARTICLES_BY_SLUG[slug];
+                  if (!rel) return null;
+                  return (
+                    <Link
+                      key={slug}
+                      href={`/panduan/${slug}`}
+                      className="rounded-lg border border-brand-border bg-brand-surface p-4 hover:border-brand-accent transition-colors block"
+                    >
+                      <div className="text-xs uppercase tracking-wider text-brand-accent mb-1">
+                        {rel.contentType}
+                      </div>
+                      <div className="text-brand-text-primary font-medium text-sm leading-snug">
+                        {rel.title}
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </section>
 
