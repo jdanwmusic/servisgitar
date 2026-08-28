@@ -1,5 +1,5 @@
-// src/data/articles.ts — Pilot batch (12 articles, all content types, evidence-based)
-// Articles 11–12 added Batch 3: acoustic concept + bass service
+// src/data/articles.ts — Pilot batch (13 articles, all content types, evidence-based)
+// Articles 11–13 added Batch 3 + V1 completion: acoustic concept, bass service, bass concept
 import type { Article } from "@/lib/types";
 
 const SRC_FENDER_SETUP = { title: "Fender Setup Guide (structural reference — Fender)", tier: "primary" as const, author: "Fender Musical Instruments", publisher: "Fender", accessDate: "2026-08-28", note: "Used as structural reference. Not a universal rule; instrument-dependent." };
@@ -421,6 +421,59 @@ export const ARTICLES: Article[] = [
       topikTerkait: [
         "apa-itu-setup-gitar",
         "service-setup-dasar-gitar-elektrik",
+        "pengukuran-neck-relief",
+        "pengukuran-action-string-height",
+      ],
+    },
+  },
+
+  // ── 13. concept — Setup Bass Guitar ──────────────────────────────────────
+  {
+    id: "art-bass-setup-concept-001",
+    slug: "apa-itu-setup-bass",
+    title: "Apa Itu Setup Bass Guitar?",
+    description:
+      "Penjelasan setup untuk bass guitar — perbedaan dari gitar elektrik, tantangan unik (scale length, string gauge, active electronics), dan prinsip dasar penyesuaian instrumen bass.",
+    category: "bass",
+    domains: ["setup", "maintenance", "measurement"],
+    contentType: "concept",
+    difficulty: "pemula",
+    readingMinutes: 5,
+    status: "draft",
+    related: [
+      "service-setup-dasar-bass",
+      "apa-itu-setup-gitar",
+      "pengukuran-neck-relief",
+      "pengukuran-action-string-height",
+    ],
+    sources: [
+      {
+        title: "Fender Bass Setup Guide (structural reference)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference for bass setup principles. Scale length and string gauge considerations differ per bass model.",
+      },
+      {
+        title: "Yamaha Bass Service Documentation (structural reference)",
+        tier: "primary" as const,
+        author: "Yamaha",
+        publisher: "Yamaha",
+        accessDate: "2026-08-28",
+        note: "Reference for comparison. Specific values vary per model.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "concept",
+      apaItu:
+        "Setup bass guitar adalah proses penyesuaian parameter instrumen pada bass — meliputi neck relief, action (ketinggian senar), intonasi, pickup height, dan (untuk bass aktif) fungsi elektronik internal. Secara prinsip mirip dengan setup gitar elektrik, namun bass memiliki tantangan tambahan: scale length (panjang scale) yang lebih panjang (umumnya 34 inci untuk bass 4-string, dibanding 25.5 inci untuk gitar elektrik), string gauge yang lebih besar, dan sensitivitas fret yang lebih rendah terhadap tekanan. Bass dengan elektronik aktif juga memerlukan pemeriksaan tambahan seperti kondisi baterai, grounding, dan fungsi preamp.",
+      fungsi:
+        "Fungsi setup bass: memastikan bass menghasilkan nada rendah yang bersih, fretbuzz minimal, dan nyaman dimainkan. Bass yang disetel dengan baik akan memiliki tension senar yang seimbang, intonasi akurat di seluruh fret, dan keseimbangan output antara senar. Berbeda dengan gitar elektrik, masalah fretbuzz pada bass lebih sulit terdengar karena frekuensi rendah lebih lambat diserap — sehingga setup yang baik mencegah masalah di frekuensi tinggi (di fret atas).",
+      hubunganDengan: [
+        "service-setup-dasar-bass",
+        "apa-itu-setup-gitar",
         "pengukuran-neck-relief",
         "pengukuran-action-string-height",
       ],
