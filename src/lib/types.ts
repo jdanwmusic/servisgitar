@@ -97,7 +97,10 @@ export interface Problem {
   name: string;
   category: InstrumentCategorySlug[];
   symptoms: string[];
-  commonCauses: string[]; // entity IDs of components/problems
+  possibleCauses: string[]; // typed possible causes (distinct from confirmed)
+  confirmedCauses?: string[]; // confirmed cause (only when evidence supports)
+  observations?: string[]; // observable facts leading to diagnosis
+  commonCauses?: string[]; // deprecated alias — migrate to possibleCauses
   diagnosis: string; // markdown summary
   severity: "minor" | "moderate" | "serious" | "critical";
   relatedArticleIds: string[];
@@ -110,7 +113,15 @@ export interface Service {
   description: string;
   estimatedDuration: string; // "30 menit", "1-2 jam"
   requiredTools: string[]; // tool IDs
+  riskLevel?: "low" | "medium" | "high" | "critical"; // structured risk classification
+  irreversible?: boolean; // true if action cannot be reversed
+  escalation?: string; // professional referral guidance
   relatedArticleIds: string[];
+}
+
+export interface RiskEnumHelper {
+  riskLevels: Array<"low" | "medium" | "high" | "critical">;
+  inferRisk(): "low" | "medium" | "high" | "critical" | "unknown";
 }
 
 export interface Tool {
@@ -128,6 +139,12 @@ export interface Measurement {
   targetRange: string; // typical accepted range, e.g. "1.5-2.0mm"
   unit: string; // "mm", "inch", "thou"
   description: string;
+  instrumentId?: string; // instrument/model this applies to (context for Phase 4)
+  measurementPoint?: string; // "12th fret", "nut", "bridge"
+  condition?: string; // "under string tension", "strings removed"
+  stringGauge?: string; // e.g. ".009-.042"
+  thresholdMin?: number; // numeric threshold for comparison
+  thresholdMax?: number;
   relatedArticleIds: string[];
 }
 

@@ -46,6 +46,8 @@ export const ARTICLES: Article[] = [
     status: "draft",
     related: ["service-setup-dasar-gitar-elektrik"],
     sources: [SRC_FISHMAN, SRC_LRBAGGS],
+    brandIds: ["yamaha"],
+    modelIds: ["yamaha-fg800"],
     updatedAt: "2026-08-28",
     body: {
       contentType: "concept",
@@ -268,6 +270,8 @@ export const ARTICLES: Article[] = [
     status: "draft",
     related: ["apa-itu-setup-gitar", "pengukuran-neck-relief", "pengukuran-action-string-height", "terminologi-intonasi", "fret-buzz"],
     sources: [SRC_FENDER_SETUP, SRC_GIBSON_REPAIR],
+    brandIds: ["fender","gibson"],
+    modelIds: ["fender-stratocaster","gibson-les-paul","fender-telecaster"],
     updatedAt: "2026-08-28",
     body: {
       contentType: "service",

@@ -157,3 +157,21 @@ Move to Phase 3 (Deep Knowledge — Brand/Model + advanced repair + restoration)
 - Build: 25 pages (17 + 3 brand + 5 model), static export verified
 - Hardcase freeze: ffd38de (verified)
 - No deployment; no autonomous design/content changes without approval
+
+========================================
+PHASE 3.5 PATCH — 2026-08-28 (COMPLETED)
+========================================
+Changes made (verified):
+1. R1 — Measurement schema: added instrumentId?, measurementPoint?, condition?, stringGauge?, thresholdMin?, thresholdMax? (types.ts)
+2. R2 — Problem schema: symptoms[] preserved; possibleCauses[] added (deprecated commonCauses); confirmedCauses?: []; observations?: [] (types.ts)
+3. R3 — Safety structure: Service interface now includes riskLevel?, irreversible?, escalation? (types.ts)
+4. R4 — Relationship graph: new file relationships.ts with 19 verified relationships (usesBrand x5, isModelOf x5, variantOf x2, hasComponent x6, causes x4, requiresTool x3, measures x2). Zero unverified relationships added.
+5. R6 — sitemap.xml updated: +8 URLs (3 brand + 5 model pages) → 23 total
+6. R7 — Article.brandIds/modelIds: populated only where verified (service article: Fender/Gibson + 3 models; electronics article: Yamaha + FG800). Generic articles (problem/tool/concept/measurement) left empty — correct behavior.
+7. R8 — Search extended: brand + model indexing added (searchArticles preserved, new search() unified). No redesign.
+8. No fabricated data: threshold fields remain null (no numeric values invented); confirmedCauses[] empty on all existing articles (no false confirmations); unknownFields preserved; source attribution intact.
+9. No Phase 4 content built. No deploy. Hardcase untouched.
+10. TypeScript interfaces backward-compatible (all new fields optional).
+11. Schema BEFORE/AFTER verified in git diff (not aspirational description).
+12. Remaining gaps (post-patch, NOT fixed): measurement context fields not yet populated in instance data; confirmedCauses not filled; riskLevel not assigned; relationship instance data exists but not fully integrated into page rendering.
+========================================
