@@ -491,7 +491,196 @@ for (const a of ARTICLES) {
 export const ARTICLES_BY_DOMAIN: Record<string, Article[]> = {};
 for (const a of ARTICLES) {
   for (const d of a.domains) {
-    if (!ARTICLES_BY_DOMAIN[d]) ARTICLES_BY_DOMAIN[d] = [];
+    if (!ARTICLES_BY_DOMAIN[d]) ARTICLES_BY_DOMAIN[d] = [  // ── 14. measurement — Pengukuran Action Akustik ────────────────────────
+  {
+    id: "art-meas-action-akustik-001",
+    slug: "pengukuran-action-string-akustik",
+    title: "Pengukuran Action / String Height pada Gitar Akustik",
+    description:
+      "Panduan pengukuran action (ketinggian senar dari fret) pada gitar akustik — termasuk titik pengukuran, nilai acuan, dan hubungan dengan kenyamanan bermain.",
+    category: "akustik",
+    domains: ["measurement", "setup", "maintenance"],
+    contentType: "measurement",
+    difficulty: "menengah",
+    readingMinutes: 7,
+    status: "draft",
+    related: [
+      "apa-itu-setup-gitar-akustik",
+      "pengukuran-action-string-height",
+      "pengukuran-neck-relief",
+      "fret-buzz",
+    ],
+    sources: [
+      {
+        title: "Fender Acoustic Setup Guide (structural reference — Fender Acoustic Guitar Setup)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference for acoustic action measurement. Not a universal rule; instrument-dependent.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "measurement",
+      apaItu: "Action atau string height adalah jarak antara bagian bawah senar dan bagian atas fret pada titik tertentu — biasanya di fret 12 dan fret pertama. Pada gitar akustik, nilai action yang terlalu rendah dapat menyebabkan fret buzz akibat resonansi body; terlalu tinggi membuat bermain sulit.",
+      target: "Menentukan apakah action sudah sesuai preferensi pemain dan mendeteksi apakah fret buzz berasal dari action tidak sesuai.",
+      caraMengukur: "Pasang capo di fret 1. Ukur jarak senar ke fret 12 pada sisi bass (E/A) dan treble (B/e). Catat nilai acuan. Ukur jarak senar ke fret pertama dengan capo. Bandingkan dengan target pemain.",
+      tools: ["Feeler gauge", "Ruler", "Capo"],
+      interpretasi: "Nilai action sangat bergantung pada gaya bermain dan preferensi, bukan instrumen saja. Tidak ada nilai universal wajib dipatuhi.",
+      topikTerkait: [
+        "apa-itu-setup-gitar-akustik",
+        "pengukuran-action-string-height",
+        "pengukuran-neck-relief",
+        "fret-buzz",
+      ],
+    },
+  },
+
+  // ── 15. problem — Fret Buzz pada Gitar Akustik ───────────────────────────
+  {
+    id: "art-problem-fret-buzz-akustik-001",
+    slug: "masalah-fret-buzz-akustik",
+    title: "Masalah Fret Buzz pada Gitar Akustik",
+    description:
+      "Penjelasan penyebab, observasi aman, dan langkah penyelesaian untuk fret buzz khusus pada gitar akustik — termasuk perbedaan dari gitar elektrik karena tidak selalu memiliki easy-access truss rod adjustment.",
+    category: "akustik",
+    domains: ["problems", "diagnosis", "setup"],
+    contentType: "problem",
+    difficulty: "pemula",
+    readingMinutes: 6,
+    status: "draft",
+    related: [
+      "fret-buzz",
+      "pengukuran-action-string-akustik",
+      "pengukuran-neck-relief",
+      "apa-itu-setup-gitar-akustik",
+    ],
+    sources: [
+      {
+        title: "Fender Acoustic Setup Guide (structural reference — Fender)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference. Not a universal rule.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "problem",
+      apaItu: "Fret buzz pada gitar akustik adalah suara dengung saat senar dipetik dan menyentuh fret sebelum waktunya. Pada akustik, penyebab umum: action terlalu rendah, neck relief tidak sesuai, bridge/saddle tidak rata, atau perubahan bracing internal.",
+      gejala: "Buzz terdengar saat senar dipetik; bisa terlokalisasi di satu fret atau menyebar; bisa hanya pada satu senar atau semua; muncul saat strumming keras atau sudah di fingerpicking ringan.",
+      penyebab: [
+        "Action terlalu rendah — dapat diukur dengan feeler gauge di fret 12 dan fret pertama.",
+        "Neck relief tidak sesuai — truss rod pada akustik sering diakses melalui soundhole (bukan headstock), sehingga penyesuaian memerlukan keahlian khusus.",
+        "Saddle atau bridge tidak sejajar — memerlukan teknisi.",
+        "Perubahan kelembapan atau suhu — wood expansion dapat menyebabkan bridge lift atau perubahan bracing.",
+      ],
+      diagnosis: "Periksa apakah buzz terjadi di satu fret (kemungkinan fret tidak rata — jangan coba file sendiri tanpa keahlian) atau menyebar (kemungkinan action atau neck relief). Perhatikan apakah buzz hanya pada satu senar atau semua senar.",
+      pengukuran: "Pengukuran action di fret 12 dan fret 1 dengan feeler gauge; pengukuran neck relief dengan metode standar (capo di fret 1, ukur di fret 7 atau 8 saat fret 1 dan fret 17 di-capo).",
+      tools: ["Feeler gauge", "Capo", "Ruler"],
+      proses: "Periksa action dengan feeler gauge; jika terlalu rendah dan tidak nyaman menyesuaikan, bawa ke teknisi. Jangan memaksakan penyesuaian truss rod tanpa keahlian — akustik memiliki akses truss rod yang berbeda dari elektrik (sering melalui soundhole).",
+      risiko: "Memaksakan penyesuaian truss rod atau file fret tanpa keahlian dapat merusak instrumen akustik — termasuk kerusakan truss rod atau neck warp permanen.",
+      lihatProfesional: "Jika buzz tidak hilang setelah penyesuaian action sederhana, atau jika melibatkan bridge, saddle, atau perubahan struktural, bawa ke teknisi profesional atau luthier yang berpengalaman dengan gitar akustik.",
+      topikTerkait: [
+        "fret-buzz",
+        "pengukuran-action-string-akustik",
+        "pengukuran-neck-relief",
+        "apa-itu-setup-gitar-akustik",
+      ],
+    },
+  },
+
+  // ── 16. terminology — Scale Length Bass ─────────────────────────────────
+  {
+    id: "art-terminologi-scale-bass-001",
+    slug: "terminologi-scale-length-bass",
+    title: "Terminologi: Scale Length pada Bass Guitar",
+    description:
+      "Penjelasan apa itu scale length, mengapa penting untuk bass guitar, dan bagaimana scale length mempengaruhi feel, tension, dan karakter suara bass.",
+    category: "bass",
+    domains: ["terminology", "setup", "maintenance"],
+    contentType: "terminology",
+    difficulty: "pemula",
+    readingMinutes: 4,
+    status: "draft",
+    related: [
+      "apa-itu-setup-bass",
+      "service-setup-dasar-bass",
+      "pengukuran-action-bass",
+    ],
+    sources: [
+      {
+        title: "Fender Bass Setup Guide (structural reference — Fender)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference. Not a universal rule.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "terminology",
+      definisi: "Scale length adalah jarak dari nut (atau nut seat) ke saddle bridge. Untuk bass 4-string, scale length umum adalah 34 inci atau sekitar 864 mm. Bass dengan scale lebih panjang memiliki tension senar yang lebih tinggi untuk nada yang sama, dan cenderung menghasilkan karakter nada yang berbeda.",
+      konteks: "Scale length mempengaruhi tiga hal: (1) Feel — jarak antar fret terasa berbeda; (2) Tension — senar dengan scale panjang untuk nada yang sama terasa lebih tegang; (3) Suara — karakter nada rendah dan mid berbeda. Bass short-scale (30 inci) terasa lebih nyaman untuk tangan kecil dan lebih warm, sedangkan long-scale (34 inci) lebih articulate dan punchy.",
+      contoh: "Fender Precision Bass (P-Bass) menggunakan long-scale 34 inci. Beberapa bass entry-level atau vintage-style menggunakan short-scale 30 inci (misalnya Fender Mustang Bass).",
+      topikTerkait: [
+        "apa-itu-setup-bass",
+        "service-setup-dasar-bass",
+        "pengukuran-action-bass",
+      ],
+    },
+  },
+
+  // ── 17. measurement — Pengukuran Action Bass ────────────────────────────
+  {
+    id: "art-meas-action-bass-001",
+    slug: "pengukuran-action-bass",
+    title: "Pengukuran Action / String Height pada Bass",
+    description:
+      "Panduan pengukuran action pada bass guitar — termasuk perbedaan dari gitar elektrik karena scale length dan string gauge yang lebih besar.",
+    category: "bass",
+    domains: ["measurement", "setup", "maintenance"],
+    contentType: "measurement",
+    difficulty: "menengah",
+    readingMinutes: 6,
+    status: "draft",
+    related: [
+      "apa-itu-setup-bass",
+      "service-setup-dasar-bass",
+      "pengukuran-action-string-height",
+      "pengukuran-neck-relief",
+    ],
+    sources: [
+      {
+        title: "Fender Bass Setup Guide (structural reference — Fender)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference. Scale length and string gauge considerations differ per bass model.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "measurement",
+      apaItu: "Action pada bass guitar adalah jarak antara senar dan fret di titik pengukuran — biasanya fret 12 dan fret pertama (dengan capo di fret 1). Karena scale length lebih panjang dan string gauge lebih besar dari gitar, action bass umumnya sedikit lebih tinggi dari gitar elektrik.",
+      target: "Memastikan action sesuai preferensi pemain dan mencegah fret buzz atau kesulitan bermain. Bass umumnya memiliki action sedikit lebih tinggi dari gitar elektrik karena scale length dan string gauge.",
+      caraMengukur: "Tuning bass terlebih dahulu. Pasang capo di fret 1 (saat mengukur di fret 12). Ukur jarak senar ke fret 12 di bass side (E/A) dan treble side (G/D). Catat nilai. Ukur jarak senar ke fret pertama dengan capo di fret 1. Bandingkan dengan target pemain.",
+      tools: ["Feeler gauge", "Capo", "Ruler"],
+      interpretasi: "Nilai action bass sangat bergantung pada gaya bermain (fingerstyle, slap, pick) dan preferensi pemain. Bass dengan string gauge lebih tebal mungkin memerlukan action sedikit lebih tinggi. Nilai acuan bass umumnya sedikit lebih tinggi dari gitar elektrik, namun tidak ada nilai universal.",
+      topikTerkait: [
+        "pengukuran-action-string-height",
+        "service-setup-dasar-bass",
+        "apa-itu-setup-bass",
+        "pengukuran-neck-relief",
+      ],
+    },
+  },
+
+];
     ARTICLES_BY_DOMAIN[d].push(a);
   }
 }
