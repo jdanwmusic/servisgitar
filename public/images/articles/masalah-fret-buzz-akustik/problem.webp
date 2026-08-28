@@ -1,0 +1,37 @@
+<!-- Pilot B: Problem illustration (conceptual/explanatory) -->
+<!-- NOT photorealistic AI image. Technical diagram placeholder to validate pipeline. -->
+<!-- Real assets via buildVisualPrompt() contract (lib/visual.ts) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="auto" aria-label="Ilustrasi area fretbuzz pada fretboard gitar akustik: lokasi masalah, observasi aman, dan langkah diagnosis tanpa membuat diagnosis pasti.">
+  <rect width="800" height="520" fill="#0A0A0C"/>
+  <text x="400" y="40" text-anchor="middle" fill="#C9A84C" font-size="22" font-family="system-ui,sans-serif" font-weight="bold">Fret Buzz — Area Observasi (Problem)</text>
+  <text x="400" y="70" text-anchor="middle" fill="#888" font-size="13" font-family="system-ui,sans-serif">Observasi aman — BUKAN diagnosis pasti. Penyebab: kemungkinan (bukan kepastian).</text>
+  <!-- Fretboard -->
+  <rect x="120" y="130" width="560" height="70" rx="8" fill="#1e3a5f" stroke="#C9A84C" stroke-width="2"/>
+  <text x="400" y="170" text-anchor="middle" fill="#e5e5e5" font-size="14" font-family="system-ui,sans-serif">FRETBOARD</text>
+  <!-- Strings -->
+  <line x1="120" y1="170" x2="680" y2="170" stroke="#C9A84C" stroke-width="3"/>
+  <line x1="120" y1="183" x2="680" y2="183" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="196" x2="680" y2="196" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="209" x2="680" y2="209" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="222" x2="680" y2="222" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="235" x2="680" y2="235" stroke="#C9A84C" stroke-width="2"/>
+  <!-- Buzz zone highlight (observation area) -->
+  <rect x="290" y="125" width="200" height="120" rx="8" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="390" y="165" text-anchor="middle" fill="#ef4444" font-size="14" font-family="system-ui,sans-serif" font-weight="bold">AREA OBSERVASI</text>
+  <text x="390" y="185" text-anchor="middle" fill="#e5e5e5" font-size="12" font-family="system-ui,sans-serif">(fret 5–9 umum)</text>
+  <text x="390" y="205" text-anchor="middle" fill="#888" font-size="11" font-family="system-ui,sans-serif">Zona buzz terlihat saat fretbuzz terjadi</text>
+  <!-- Observation checkboxes -->
+  <rect x="120" y="270" width="300" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="130" y="292" fill="#e5e5e5" font-size="12" font-family="system-ui,sans-serif">SATU FRET? → Jangan file sendiri</text>
+  <rect x="440" y="270" width="300" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="292" fill="#e5e5e5" font-size="12" font-family="system-ui,sans-serif">MENYEBAR? → Mungkin action / relief</text>
+  <!-- Observations -->
+  <text x="120" y="340" fill="#C9A84C" font-size="13" font-family="system-ui,sans-serif">Observasi Aman:</text>
+  <text x="120" y="360" fill="#888" font-size="12" font-family="system-ui,sans-serif">(1) Satu fret atau menyebar?</text>
+  <text x="120" y="378" fill="#888" font-size="12" font-family="system-ui,sans-serif">(2) Satu senar atau semua?</text>
+  <text x="120" y="396" fill="#888" font-size="12" font-family="system-ui,sans-serif">(3) Strumming keras atau fingerpicking ringan?</text>
+  <!-- Note -->
+  <text x="400" y="450" text-anchor="middle" fill="#888" font-size="11" font-family="system-ui,sans-serif">CATATAN AKURASI: Diagram ini menjelaskan area observasi dan langkah aman.</text>
+  <text x="400" y="468" text-anchor="middle" fill="#888" font-size="11" font-family="system-ui,sans-serif">BUKAN diagnosis pasti. Penyebab pada artikel: KEMUNGKINAN, bukan kepastian.</text>
+  <text x="400" y="486" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui,sans-serif">Sumber: Fender Acoustic Setup Guide (primary, structural reference)</text>
+</svg>

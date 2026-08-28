@@ -535,6 +535,11 @@ for (const a of ARTICLES) {
         "fret-buzz",
       ],
     },
+    visual: {
+      kind: "measurement",
+      alt: "Diagram pengukuran action (string height) pada gitar akustik: titik pengukuran di fret 12 dan fret pertama dengan capo, menggunakan feeler gauge.",
+      caption: "Gambar 1: Titik pengukuran action pada fret 12 dan fret 1. Jarak diukur dengan feeler gauge; nilai acuan bergantung pada gaya bermain (tidak universal).",
+    },
   },
 
   // ── 15. problem — Fret Buzz pada Gitar Akustik ───────────────────────────
@@ -589,6 +594,11 @@ for (const a of ARTICLES) {
         "pengukuran-neck-relief",
         "apa-itu-setup-gitar-akustik",
       ],
+    },
+    visual: {
+      kind: "problem",
+      alt: "Ilustrasi area frebuzz pada fretboard gitar akustik: lokasi masalah, observasi aman, dan langkah diagnosis tanpa membuat diagnosis pasti.",
+      caption: "Gambar 2: Area fretbuzz pada fretboard gitar akustik. Observasi aman pertama: periksa apakah buzz satu fret atau menyebar, satu senar atau semua.",
     },
   },
 

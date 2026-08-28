@@ -240,6 +240,13 @@ export interface ArticleBase {
   modelIds?: string[]; // linked models
   sources: Source[];
   updatedAt: string; // ISO date
+  visual?: VisualReference; // optional visual reference — Phase B
+}
+
+export interface VisualReference {
+  kind: "anatomy" | "measurement" | "problem" | "process" | "before-after" | "comparison";
+  alt: string; // descriptive alt text — required
+  caption?: string; // optional caption
 }
 
 export type ArticleBody = ArticleBodyConcept | ArticleBodyProblem | ArticleBodyService | ArticleBodyTool | ArticleBodyMeasurement | ArticleBodyTechnique | ArticleBodyTerminology | ArticleBodyCaseStudy;

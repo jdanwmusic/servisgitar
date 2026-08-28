@@ -1,0 +1,33 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent-servisgitar-pilot-a",
+  "elements": [
+    {"type": "rectangle", "id": "darkbg", "x": -500, "y": -300, "width": 1600, "height": 1100, "backgroundColor": "#0A0A0C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "bg1", "x": 50, "y": 160, "width": 700, "height": 420, "backgroundColor": "#0A0A0C", "fillStyle": "solid", "strokeColor": "#C9A84C", "strokeWidth": 1, "roundness": {"type": 3}},
+    {"type": "text", "id": "title1", "x": 60, "y": 170, "width": 680, "height": 30, "text": "PENGUKURAN ACTION — TITIK UKUR", "fontSize": 20, "fontFamily": 1, "strokeColor": "#C9A84C", "textAlign": "center", "originalText": "PENGUKURAN ACTION — TITIK UKUR", "autoResize": true},
+    {"type": "text", "id": "sub1", "x": 60, "y": 200, "width": 680, "height": 20, "text": "Gitar Akustik  |  Alat: Feeler Gauge  |  Sumber: Fender Acoustic Setup (primary reference)", "fontSize": 12, "fontFamily": 1, "strokeColor": "#888", "textAlign": "center", "originalText": "Gitar Akustik  |  Alat: Feeler Gauge  |  Sumber: Fender Acoustic Setup (primary reference)", "autoResize": true},
+    {"type": "rectangle", "id": "fretboard", "x": 100, "y": 240, "width": 600, "height": 100, "backgroundColor": "#1e3a5f", "fillStyle": "solid", "strokeColor": "#C9A84C", "strokeWidth": 2, "roundness": {"type": 3}},
+    {"type": "text", "id": "t_fretboard", "x": 110, "y": 250, "width": 580, "height": 80, "text": "FRETBOARD / NECK", "fontSize": 16, "fontFamily": 1, "strokeColor": "#e5e5e5", "textAlign": "center", "verticalAlign": "middle", "containerId": "fretboard", "originalText": "FRETBOARD / NECK", "autoResize": true},
+    {"type": "rectangle", "id": "fret1", "x": 100, "y": 350, "width": 80, "height": 20, "backgroundColor": "#2d1b69", "fillStyle": "solid", "strokeColor": "#C9A84C", "strokeWidth": 1, "boundElements": [{"id": "t_fret1", "type": "text"}]},
+    {"type": "text", "id": "t_fret1", "x": 105, "y": 352, "width": 70, "height": 16, "text": "Fret 1", "fontSize": 14, "fontFamily": 1, "strokeColor": "#e5e5e5", "textAlign": "center", "verticalAlign": "middle", "containerId": "fret1", "originalText": "Fret 1", "autoResize": true},
+    {"type": "rectangle", "id": "fret12", "x": 500, "y": 350, "width": 80, "height": 20, "backgroundColor": "#2d1b69", "fillStyle": "solid", "strokeColor": "#C9A84C", "strokeWidth": 1, "boundElements": [{"id": "t_fret12", "type": "text"}]},
+    {"type": "text", "id": "t_fret12", "x": 505, "y": 352, "width": 70, "height": 16, "text": "Fret 12", "fontSize": 14, "fontFamily": 1, "strokeColor": "#e5e5e5", "textAlign": "center", "verticalAlign": "middle", "containerId": "fret12", "originalText": "Fret 12", "autoResize": true},
+    {"type": "rectangle", "id": "string1", "x": 80, "y": 310, "width": 640, "height": 4, "backgroundColor": "#C9A84C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "string2", "x": 80, "y": 322, "width": 640, "height": 4, "backgroundColor": "#C9A84C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "string3", "x": 80, "y": 334, "width": 640, "height": 4, "backgroundColor": "#C9A84C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "string4", "x": 80, "y": 346, "width": 640, "height": 4, "backgroundColor": "#C9A84C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "string5", "x": 80, "y": 358, "width": 640, "height": 4, "backgroundColor": "#C9A84C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "string6", "x": 80, "y": 370, "width": 640, "height": 4, "backgroundColor": "#C9A84C", "fillStyle": "solid", "strokeColor": "transparent", "strokeWidth": 0},
+    {"type": "rectangle", "id": "capo", "x": 90, "y": 275, "width": 100, "height": 20, "backgroundColor": "#5c3d1a", "fillStyle": "solid", "strokeColor": "#C9A84C", "strokeWidth": 1, "roundness": {"type": 3}, "boundElements": [{"id": "t_capo", "type": "text"}]},
+    {"type": "text", "id": "t_capo", "x": 95, "y": 277, "width": 90, "height": 16, "text": "CAPO (fret 1)", "fontSize": 13, "fontFamily": 1, "strokeColor": "#e5e5e5", "textAlign": "center", "verticalAlign": "middle", "containerId": "capo", "originalText": "CAPO (fret 1)", "autoResize": true},
+    {"type": "rectangle", "id": "feeler", "x": 620, "y": 250, "width": 80, "height": 60, "backgroundColor": "#1a4d4d", "fillStyle": "solid", "strokeColor": "#C9A84C", "strokeWidth": 2, "roundness": {"type": 3}, "boundElements": [{"id": "t_feeler", "type": "text"}]},
+    {"type": "text", "id": "t_feeler", "x": 625, "y": 268, "width": 70, "height": 30, "text": "FEELER\nGAUGE", "fontSize": 12, "fontFamily": 1, "strokeColor": "#e5e5e5", "textAlign": "center", "verticalAlign": "middle", "containerId": "feeler", "originalText": "FEELER\nGAUGE", "autoResize": true},
+    {"type": "arrow", "id": "arr_f1", "x": 140, "y": 300, "width": 0, "height": 50, "points": [[0, 0], [0, 50]], "endArrowhead": "arrow", "strokeColor": "#C9A84C", "strokeWidth": 2},
+    {"type": "text", "id": "t_arr_f1", "x": 100, "y": 305, "width": 80, "height": 40, "text": "Ukur di\nsini ↓", "fontSize": 13, "fontFamily": 1, "strokeColor": "#C9A84C", "textAlign": "center", "originalText": "Ukur di\nsini ↓", "autoResize": true},
+    {"type": "arrow", "id": "arr_f12", "x": 540, "y": 300, "width": 0, "height": 50, "points": [[0, 0], [0, 50]], "endArrowhead": "arrow", "strokeColor": "#C9A84C", "strokeWidth": 2},
+    {"type": "text", "id": "t_arr_f12", "x": 500, "y": 305, "width": 80, "height": 40, "text": "Ukur di\nsini ↓", "fontSize": 13, "fontFamily": 1, "strokeColor": "#C9A84C", "textAlign": "center", "originalText": "Ukur di\nsini ↓", "autoResize": true},
+    {"type": "text", "id": "note1", "x": 60, "y": 590, "width": 680, "height": 40, "text": "CATATAN AKURASI: Nilai acuan bersifat umum (referensi, bukan universal). Tidak ada angka spesifik divisualisasikan. Diagram hanya menunjukkan titik pengukuran dan metode (feeler gauge). Sumber: Fender Acoustic Setup Guide (primary, structural reference).", "fontSize": 12, "fontFamily": 1, "strokeColor": "#888", "textAlign": "left", "originalText": "CATATAN AKURASI: Nilai acuan bersifat umum (referensi, bukan universal). Tidak ada angka spesifik divisualisasikan. Diagram hanya menunjukkan titik pengukuran dan metode (feeler gauge). Sumber: Fender Acoustic Setup Guide (primary, structural reference).", "autoResize": true}
+  ],
+  "appState": {"viewBackgroundColor": "#0A0A0C"}
+}

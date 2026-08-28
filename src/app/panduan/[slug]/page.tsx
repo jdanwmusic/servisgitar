@@ -2,6 +2,7 @@ import { ARTICLES_BY_SLUG } from "@/data/articles";
 import { BRAND_BY_ID, MODEL_BY_ID } from "@/data/brands-models";
 import { articleTitle, articleDescription } from "@/lib/seo-template";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
+import ArticleVisual from "@/components/ArticleVisual";
 import type { Metadata } from "next";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -88,6 +89,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 </section>
               ))}
             </div>
+
+            {/* Phase B: conditional visual section (only renders if article.visual is set and valid) */}
+            <ArticleVisual article={a} />
 
             {/* Internal links (related) */}
             <section className="mt-12 pt-8 border-t border-brand-border">

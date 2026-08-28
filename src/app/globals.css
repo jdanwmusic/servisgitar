@@ -21,6 +21,19 @@
   }
 }
 
+/* Phase B: Article visual system — conditional, non-destructive */
+@layer components {
+  .article-visual-section {
+    @apply my-10 rounded-lg border border-brand-border bg-brand-surface p-4 sm:p-6 max-w-full;
+  }
+  .article-visual-placeholder {
+    @apply min-h-[12rem] flex items-center justify-center border border-dashed border-brand-border rounded-[0.75rem] bg-brand-bg bg-opacity-70 text-brand-accent text-sm italic text-center p-6;
+  }
+  .article-visual-section figcaption {
+    @apply text-xs text-brand-muted mt-3 text-center;
+  }
+}
+
 @layer components {
   .container-shell {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;

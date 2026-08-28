@@ -1,0 +1,44 @@
+<!-- Pilot A: Measurement diagram (conceptual/explanatory) -->
+<!-- This is NOT a photorealistic AI image. It is a technical diagram placeholder -->
+<!-- to demonstrate the visual pipeline. Real assets should be generated -->
+<!-- using buildVisualPrompt() contract (lib/visual.ts) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="auto" aria-label="Diagram pengukuran action (string height) pada gitar akustik: titik pengukuran fret 12 dan fret 1 dengan feeler gauge.">
+  <rect width="800" height="520" fill="#0A0A0C"/>
+  <text x="400" y="40" text-anchor="middle" fill="#C9A84C" font-size="22" font-family="system-ui,sans-serif" font-weight="bold">Pengukuran Action — Gitar Akustik (Measurement)</text>
+  <text x="400" y="70" text-anchor="middle" fill="#888" font-size="13" font-family="system-ui,sans-serif">Diagram teknis — hanya titik pengukuran dan arah. Bukan nilai universal.</text>
+  <!-- Fretboard -->
+  <rect x="120" y="150" width="560" height="70" rx="8" fill="#1e3a5f" stroke="#C9A84C" stroke-width="2"/>
+  <text x="400" y="190" text-anchor="middle" fill="#e5e5e5" font-size="14" font-family="system-ui,sans-serif">FRETBOARD — titik ukur utama: Fret 12</text>
+  <!-- Fret markers -->
+  <rect x="160" y="230" width="70" height="24" rx="6" fill="#2d1b69" stroke="#C9A84C" stroke-width="1"/>
+  <text x="195" y="246" text-anchor="middle" fill="#e5e5e5" font-size="12" font-family="system-ui,sans-serif">Fret 1</text>
+  <rect x="500" y="230" width="70" height="24" rx="6" fill="#2d1b69" stroke="#C9A84C" stroke-width="1"/>
+  <text x="535" y="246" text-anchor="middle" fill="#e5e5e5" font-size="12" font-family="system-ui,sans-serif">Fret 12</text>
+  <!-- Strings (horizontal) -->
+  <line x1="120" y1="260" x2="680" y2="260" stroke="#C9A84C" stroke-width="3"/>
+  <line x1="120" y1="275" x2="680" y2="275" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="290" x2="680" y2="290" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="305" x2="680" y2="305" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="320" x2="680" y2="320" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="120" y1="335" x2="680" y2="335" stroke="#C9A84C" stroke-width="2"/>
+  <!-- Measurement arrows -->
+  <line x1="195" y1="220" x2="195" y2="260" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="220" y="230" fill="#f59e0b" font-size="12" font-family="system-ui,sans-serif">Capo di fret 1</text>
+  <line x1="535" y1="220" x2="535" y2="260" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="560" y="230" fill="#f59e0b" font-size="12" font-family="system-ui,sans-serif">Ukur di fret 12</text>
+  <!-- Feeler gauge box -->
+  <rect x="620" y="150" width="80" height="60" rx="6" fill="#1a4d4d" stroke="#C9A84C" stroke-width="2"/>
+  <text x="660" y="175" text-anchor="middle" fill="#e5e5e5" font-size="11" font-family="system-ui,sans-serif">FEELER</text>
+  <text x="660" y="190" text-anchor="middle" fill="#e5e5e5" font-size="11" font-family="system-ui,sans-serif">GAUGE</text>
+  <line x1="620" y1="180" x2="580" y2="260" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="640" y="215" fill="#888" font-size="10" font-family="system-ui,sans-serif">Alat pengukur</text>
+  <!-- Note -->
+  <text x="400" y="390" text-anchor="middle" fill="#888" font-size="12" font-family="system-ui,sans-serif">CATATAN AKURASI: Diagram hanya menunjukkan titik pengukuran dan arah.</text>
+  <text x="400" y="410" text-anchor="middle" fill="#888" font-size="12" font-family="system-ui,sans-serif">Nilai acuan tidak divisualisasikan (artikel menyatakan "referensi, tidak universal").</text>
+  <text x="400" y="430" text-anchor="middle" fill="#888" font-size="11" font-family="system-ui,sans-serif">Sumber: Fender Acoustic Setup Guide (primary, structural reference)</text>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>
