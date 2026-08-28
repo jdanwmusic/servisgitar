@@ -1,4 +1,5 @@
 import { BRANDS, MODELS_BY_BRAND } from "@/data/brands-models";
+import { ARTICLES_BY_SLUG } from "@/data/articles";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Link from "next/link";
@@ -19,6 +20,15 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
     );
   }
   const models = MODELS_BY_BRAND[brand.id] ?? [];
+
+  // Kumpulkan relatedArticleIds dari semua model (existing data, no fabrication)
+  const articleSlugSet = new Set<string>();
+  for (const m of models) {
+    for (const slug of m.relatedArticleIds ?? []) articleSlugSet.add(slug);
+  }
+  const relatedArticles = Array.from(articleSlugSet)
+    .map(slug => ARTICLES_BY_SLUG[slug])
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
 
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text-primary flex flex-col">
@@ -54,6 +64,31 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
             {models.length === 0 && <p className="text-brand-muted">Belum ada model yang didokumentasikan untuk brand ini.</p>}
           </div>
         </section>
+
+        {relatedArticles.length > 0 && (
+          <section className="mb-12 border-t border-brand-border pt-8">
+            <h2 className="text-xl font-semibold mb-2">Panduan Terkait</h2>
+            <p className="text-sm text-brand-muted mb-4">
+              Panduan servis yang relevan dengan model {brand.name}.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {relatedArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/panduan/${a.slug}`}
+                  className="block rounded-lg border border-brand-border bg-brand-surface p-4 hover:border-brand-accent/60 transition-colors group"
+                >
+                  <span className="text-[10px] uppercase tracking-widest text-brand-accent font-medium">
+                    {a.contentType}
+                  </span>
+                  <h3 className="mt-1 text-sm font-medium text-brand-text-primary group-hover:text-brand-accent transition-colors line-clamp-2">
+                    {a.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section>
           <h2 className="text-xl font-semibold mb-4">Sumber Verifikasi</h2>

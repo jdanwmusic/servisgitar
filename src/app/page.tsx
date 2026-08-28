@@ -5,29 +5,24 @@ import { BRANDS } from "@/data/brands-models";
 import Link from "next/link";
 
 export default function HomePage() {
-  // Featured: pick 3 diverse articles (concept + problem + measurement)
+  // 3 featured articles — diverse types
   const featured = ARTICLES.slice(0, 3);
 
-  // Service preview cards — from existing article and content
-  const serviceItems = [
-    {
-      title: "Setup Gitar",
-      desc: "Penyesuaian neck relief, action, dan intonasi agar gitar bermain dengan nyaman dan stabil.",
-      href: "/panduan/apa-itu-setup-gitar",
-      badge: "Dasar",
-    },
-    {
-      title: "Setup Gitar Elektrik",
-      desc: "Layanan setup profesional untuk gitar elektrik — termasuk pemeriksaan nut, saddle, dan elektronik dasar.",
-      href: "/panduan/service-setup-dasar-gitar-elektrik",
-      badge: "Profesional",
-    },
-    {
-      title: "Diagnosis Fret Buzz",
-      desc: "Identifikasi penyebab buzz — dari relief leher hingga fret yang tidak rata.",
-      href: "/panduan/fret-buzz",
-      badge: "Diagnostik",
-    },
+  // Knowledge categories — from content-registry (Akustik / Elektrik / Bass)
+  const instrumentCategories = [
+    { label: "Gitar Akustik", href: "/kategori/akustik", desc: "Setup, perawatan, dan repair gitar akustik natural." },
+    { label: "Gitar Elektrik", href: "/kategori/elektrik", desc: "Setup, elektronik, dan setup profissional gitar elektrik." },
+    { label: "Bass", href: "/kategori/bass", desc: "Servis dan setup bass guitar." },
+  ];
+
+  // Knowledge domains — from content-registry (key domains relevant to guitar service)
+  const knowledgeDomains = [
+    { label: "Setup", href: "/panduan/apa-itu-setup-gitar", desc: "Relief, action, intonasi." },
+    { label: "Diagnosis", href: "/panduan/fret-buzz", desc: "Identifikasi masalah fret buzz, tuning." },
+    { label: "Pengukuran", href: "/panduan/pengukuran-neck-relief", desc: "Neck relief, action, intonasi." },
+    { label: "Komponen", href: "/panduan/fret-rocker-cara-menggunakan", desc: "Nut, bridge, tremolo, fret, pickup." },
+    { label: "Tools", href: "/panduan/terminologi-intonasi", desc: "Alat ukur dan alat servis." },
+    { label: "Perbaikan", href: "/panduan/service-setup-dasar-gitar-elektrik", desc: "Fret leveling, restring, repair dasar." },
   ];
 
   return (
@@ -35,131 +30,122 @@ export default function HomePage() {
       <Nav />
 
       <main className="flex-1">
-        {/* ── HERO ───────────────────────────────────────────────────── */}
+
+        {/* ── IDENTITY BLOCK ───────────────────────────────────────── */}
         <section
-          className="relative isolate overflow-hidden bg-gradient-hero"
-          aria-label="Hero"
+          className="border-b border-brand-border/40 bg-brand-bg"
+          aria-label="Tentang platform"
         >
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-noise-dark opacity-60 mix-blend-overlay"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-brand-accent/10 blur-3xl"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-brand-accent/5 blur-3xl"
-          />
-
-          <div className="container-shell relative py-24 sm:py-32 lg:py-40">
+          <div className="container-shell py-14 sm:py-18">
             <div className="max-w-3xl">
-              <p className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-brand-surface/60 px-3 py-1 text-xs font-medium uppercase tracking-widest text-brand-accent backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-accent" />
-                JW Guitar Service
+              <p className="text-xs uppercase tracking-widest text-brand-accent font-medium mb-4">
+                Pusat Pengetahuan Servis Gitar
               </p>
-
-              <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-brand-text-primary sm:text-5xl lg:text-6xl">
-                Servis Gitar &amp; Bass
-                <span className="bg-gradient-brand bg-clip-text text-transparent">
-                  {" "}Profesional.
-                </span>
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-text-primary leading-tight">
+                ServisGitar.com
               </h1>
-
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-text">
-                Setup, fret job, elektronik, hingga custom modification —
-                dikerjakan dengan standar workshop profesional. Servis untuk
-                gitar akustik, elektrik, dan bass dari berbagai merek.
+              <p className="mt-4 text-lg text-brand-text leading-relaxed max-w-2xl">
+                Pusat Pengetahuan Servis, Repair &amp; Perawatan Gitar.{" "}
+                Pelajari setup, diagnosis, pengukuran, repair, komponen,
+                tools, dan perawatan gitar akustik, elektrik, dan bass.
               </p>
-
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link href="/kontak" className="btn-brand">
-                  Booking Servis
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/search" className="btn-brand">
+                  Cari Pengetahuan
                 </Link>
-                <Link href="/layanan" className="btn-ghost">
-                  Lihat Layanan
+                <Link href="/kategori/elektrik" className="btn-ghost">
+                  Mulai Pelajari
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── SERVICES PREVIEW ───────────────────────────────────────── */}
+        {/* ── INSTRUMENT CATEGORIES ──────────────────────────────── */}
         <section
-          id="layanan"
-          className="border-t border-brand-border/40 bg-brand-bg py-20"
-          aria-label="Layanan"
+          className="border-b border-brand-border/40 bg-brand-bg py-14"
+          aria-label="Kategori instrumen"
         >
           <div className="container-shell">
-            <div className="mb-12">
-              <p className="text-xs uppercase tracking-widest text-brand-accent font-medium mb-3">
-                Layanan
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                Apa yang Kami Kerjakan
-              </h2>
-              <p className="mt-3 max-w-2xl text-brand-text">
-                Servis berdasarkan pengetahuan teknis yang terverifikasi.
-                Setiap penyesuaian mempertimbangkan spesifikasi instrumen.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {serviceItems.map((svc) => (
+            <h2 className="text-2xl font-bold tracking-tight mb-6">
+              Gitar yang Dibahas
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {instrumentCategories.map((cat) => (
                 <Link
-                  key={svc.href}
-                  href={svc.href}
-                  className="group rounded-xl border border-brand-border bg-brand-surface p-6 hover:border-brand-accent/60 transition-colors"
+                  key={cat.href}
+                  href={cat.href}
+                  className="group rounded-xl border border-brand-border bg-brand-surface p-5 hover:border-brand-accent/60 transition-colors"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <span className="rounded-full border border-brand-accent/40 bg-brand-accent/10 px-2 py-0.5 text-xs text-brand-accent font-medium">
-                      {svc.badge}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-brand-text-primary group-hover:text-brand-accent transition-colors">
-                    {svc.title}
+                  <h3 className="font-semibold text-brand-text-primary group-hover:text-brand-accent transition-colors">
+                    {cat.label}
                   </h3>
-                  <p className="mt-2 text-sm text-brand-text leading-relaxed">
-                    {svc.desc}
-                  </p>
-                  <p className="mt-4 text-xs text-brand-accent font-medium group-hover:underline">
-                    Baca panduan →
+                  <p className="mt-2 text-sm text-brand-muted leading-relaxed">
+                    {cat.desc}
                   </p>
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
 
-            <div className="mt-8 text-center">
+        {/* ── KNOWLEDGE DOMAINS ───────────────────────────────────── */}
+        <section
+          className="border-b border-brand-border/40 bg-brand-surface py-14"
+          aria-label="Domain pengetahuan"
+        >
+          <div className="container-shell">
+            <h2 className="text-2xl font-bold tracking-tight mb-2">
+              Yang Bisa Dipelajari
+            </h2>
+            <p className="text-brand-text mb-8 max-w-xl">
+              Informasi servis gitar terstruktur: dari konsep dasar
+              hingga teknik profesional.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {knowledgeDomains.map((dom) => (
+                <Link
+                  key={dom.href}
+                  href={dom.href}
+                  className="group rounded-xl border border-brand-border bg-brand-bg p-5 hover:border-brand-accent/60 transition-colors"
+                >
+                  <h3 className="font-medium text-brand-text-primary group-hover:text-brand-accent transition-colors">
+                    {dom.label}
+                  </h3>
+                  <p className="mt-1 text-sm text-brand-muted leading-relaxed">
+                    {dom.desc}
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-6 text-center">
               <Link
-                href="/layanan"
+                href="/search"
                 className="text-sm text-brand-muted hover:text-brand-accent transition-colors"
               >
-                Lihat semua layanan dan informasi servis →
+                Telusuri semua pengetahuan →
               </Link>
             </div>
           </div>
         </section>
 
-        {/* ── KNOWLEDGE BASE ────────────────────────────────────────── */}
+        {/* ── FEATURED GUIDES ─────────────────────────────────────── */}
         <section
-          className="border-t border-brand-border/40 py-20"
-          aria-label="Knowledge Base"
+          className="border-b border-brand-border/40 bg-brand-bg py-14"
+          aria-label="Panduan pilihan"
         >
           <div className="container-shell">
-            <div className="mb-12">
-              <p className="text-xs uppercase tracking-widest text-brand-accent font-medium mb-3">
-                Knowledge Base
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                Panduan Servis &amp; Perawatan
+            <div className="flex items-end justify-between mb-6">
+              <h2 className="text-2xl font-bold tracking-tight">
+                Panduan Pilihan
               </h2>
-              <p className="mt-3 max-w-2xl text-brand-text">
-                Pengetahuan servis gitar berbasis证据 — sumber dari manufacturer
-                resmi dan referensi profesional. Setiap klaim memiliki attribution.
-              </p>
+              <Link
+                href="/search"
+                className="text-sm text-brand-muted hover:text-brand-accent transition-colors"
+              >
+                Lihat semua →
+              </Link>
             </div>
-
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {featured.map((a) => (
                 <Link
@@ -179,60 +165,33 @@ export default function HomePage() {
                   <h3 className="text-base font-semibold text-brand-text-primary group-hover:text-brand-accent transition-colors">
                     {a.title}
                   </h3>
-                  <p className="mt-2 text-sm text-brand-text line-clamp-2">
+                  <p className="mt-2 text-sm text-brand-text line-clamp-2 leading-relaxed">
                     {a.description}
                   </p>
                 </Link>
               ))}
             </div>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/kategori/elektrik"
-                className="rounded-full border border-brand-border bg-brand-surface px-4 py-2 text-sm text-brand-text hover:border-brand-accent hover:text-brand-accent transition-colors"
-              >
-                Gitar Elektrik
-              </Link>
-              <Link
-                href="/kategori/akustik"
-                className="rounded-full border border-brand-border bg-brand-surface px-4 py-2 text-sm text-brand-text hover:border-brand-accent hover:text-brand-accent transition-colors"
-              >
-                Gitar Akustik
-              </Link>
-              <Link
-                href="/search"
-                className="rounded-full border border-brand-border bg-brand-surface px-4 py-2 text-sm text-brand-text hover:border-brand-accent hover:text-brand-accent transition-colors"
-              >
-                + Semua Panduan
-              </Link>
-            </div>
           </div>
         </section>
 
-        {/* ── BRANDS ─────────────────────────────────────────────────── */}
+        {/* ── BRANDS ──────────────────────────────────────────────── */}
         <section
-          className="border-t border-brand-border/40 bg-brand-bg py-20"
+          className="border-b border-brand-border/40 bg-brand-surface py-14"
           aria-label="Brand"
         >
           <div className="container-shell">
-            <div className="mb-10">
-              <p className="text-xs uppercase tracking-widest text-brand-accent font-medium mb-3">
-                Merek
-              </p>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Model yang Telah Didokumentasikan
-              </h2>
-              <p className="mt-2 text-brand-text">
-                Spesifikasi servis-relevant per merek — dari sumber manufacturer.
-              </p>
-            </div>
-
+            <h2 className="text-2xl font-bold tracking-tight mb-2">
+              Merek yang Didokumentasikan
+            </h2>
+            <p className="text-brand-text mb-6">
+              Spesifikasi servis-relevant per merek — dari sumber manufacturer.
+            </p>
             <div className="grid sm:grid-cols-3 gap-4">
               {BRANDS.map((brand) => (
                 <Link
                   key={brand.id}
                   href={`/brand/${brand.id}`}
-                  className="group rounded-xl border border-brand-border bg-brand-surface p-5 hover:border-brand-accent/60 transition-colors"
+                  className="group rounded-xl border border-brand-border bg-brand-bg p-5 hover:border-brand-accent/60 transition-colors"
                 >
                   <h3 className="font-semibold text-brand-text-primary group-hover:text-brand-accent transition-colors">
                     {brand.name}
@@ -249,30 +208,38 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── CTA ──────────────────────────────────────────────────── */}
+        {/* ── SECONDARY JW CTA ───────────────────────────────────── */}
         <section
-          id="kontak"
-          className="border-t border-brand-border/40 py-20"
-          aria-label="Kontak"
+          className="border-b border-brand-border/40 bg-brand-bg py-14"
+          aria-label="Bantuan profesional"
         >
-          <div className="container-shell text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Butuh Servis?
-            </h2>
-            <p className="mt-4 max-w-xl mx-auto text-brand-text">
-              Hubungi untuk booking atau konsultasi. Servis untuk gitar
-              akustik, elektrik, dan bass — berbagai merek.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link href="/kontak" className="btn-brand">
-                Hubungi Kami
-              </Link>
-              <Link href="/layanan" className="btn-ghost">
-                Pelajari Layanan
-              </Link>
+          <div className="container-shell">
+            <div className="rounded-xl border border-brand-border bg-brand-surface p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div>
+                <h2 className="text-xl font-semibold">
+                  Butuh bantuan profesional?
+                </h2>
+                <p className="mt-2 text-sm text-brand-text leading-relaxed max-w-md">
+                  Konsultasikan gitar Anda dengan JW Guitar Service — setup,
+                  fret job, elektronik, dan custom modification untuk gitar
+                  akustik, elektrik, dan bass.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 shrink-0">
+                <Link href="/kontak" className="btn-brand whitespace-nowrap">
+                  Hubungi Kami
+                </Link>
+                <Link
+                  href="/layanan"
+                  className="text-sm text-brand-muted hover:text-brand-accent text-center transition-colors"
+                >
+                  Lihat layanan →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
+
       </main>
 
       <Footer />
