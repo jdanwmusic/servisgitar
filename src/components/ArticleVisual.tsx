@@ -43,15 +43,12 @@ export default function ArticleVisual({ article }: Props) {
         so the information is still accessible.
       */}
       <figure>
-        <div
-          role="img"
-          aria-label={v.alt}
-          className="article-visual-placeholder"
-        >
-          <span className="text-brand-muted text-sm italic">
-            Diagram akan ditampilkan di sini ketika aset tersedia.
-          </span>
-        </div>
+        <img
+          src={path}
+          alt={v.alt}
+          className="article-visual-image w-full h-auto rounded"
+          loading="lazy"
+        />
         {v.caption && (
           <figcaption className="text-xs text-brand-muted mt-3 text-center">
             {v.caption}
