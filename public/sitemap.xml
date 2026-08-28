@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://servisgitar.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://servisgitar.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://servisgitar.com/kategori/elektrik</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://servisgitar.com/kategori/akustik</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://servisgitar.com/kategori/elektrik-akustik</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://servisgitar.com/kategori/bass</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://servisgitar.com/panduan/apa-itu-setup-gitar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/apa-itu-elektronik-gitar-akustik</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/fret-buzz</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/tuning-instability</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/fret-rocker-cara-menggunakan</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://servisgitar.com/panduan/pengukuran-neck-relief</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/pengukuran-action-string-height</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/terminologi-fret-leveling</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://servisgitar.com/panduan/terminologi-intonasi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://servisgitar.com/panduan/service-setup-dasar-gitar-elektrik</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
