@@ -1,4 +1,5 @@
-// src/data/articles.ts — Pilot batch (10 articles, all content types, evidence-based)
+// src/data/articles.ts — Pilot batch (12 articles, all content types, evidence-based)
+// Articles 11–12 added Batch 3: acoustic concept + bass service
 import type { Article } from "@/lib/types";
 
 const SRC_FENDER_SETUP = { title: "Fender Setup Guide (structural reference — Fender)", tier: "primary" as const, author: "Fender Musical Instruments", publisher: "Fender", accessDate: "2026-08-28", note: "Used as structural reference. Not a universal rule; instrument-dependent." };
@@ -291,6 +292,138 @@ export const ARTICLES: Article[] = [
       risiko: "Risiko setup: (1) Truss rod yang diputar berlebihan dapat merusak leher. (2) Saddle yang disesuaikan terlalu rendah tidak bisa dikembalikan. (3) Nut yang difile terlalu lebar/dalam merusak nut. (4) Setup yang tidak sesuai dengan preferensi pemain (misalnya action terlalu rendah untuk strumming keras). Teknisi yang berpengalaman biasanya mendiskusikan preferensi pemain sebelum melakukan penyesuaian besar.",
       lihatProfesional: "Bawa ke teknisi profesional untuk setup dasar — layanan ini biasanya ditawarkan oleh toko musik, luthier independen, atau teknisi servis gitar. Hindari setup sendiri jika: (1) tidak yakin dengan prosedur truss rod adjustment, (2) tidak memiliki alat yang sesuai, (3) gitar adalah instrumen koleksi/nilai tinggi yang tidak boleh dirisikokan. Biaya setup dasar bervariasi — di Indonesia, umumnya Rp 150.000 - Rp 500.000 tergantung kompleksitas dan lokasi.",
       topikTerkait: ["apa-itu-setup-gitar", "pengukuran-neck-relief", "pengukuran-action-string-height", "terminologi-intonasi", "fret-buzz"],
+    },
+  },
+
+  // ── 11. concept — Setup Gitar Akustik ─────────────────────────────────────
+  {
+    id: "art-setup-acoustic-001",
+    slug: "apa-itu-setup-gitar-akustik",
+    title: "Apa Itu Setup Gitar Akustik?",
+    description:
+      "Penjelasan setup untuk gitar akustik — perbedaan dari elektrik, tantangan unik, dan prinsip dasar penyesuaian instrumen akustik.",
+    category: "akustik",
+    domains: ["setup", "maintenance", "measurement"],
+    contentType: "concept",
+    difficulty: "pemula",
+    readingMinutes: 5,
+    status: "draft",
+    related: [
+      "apa-itu-setup-gitar",
+      "pengukuran-neck-relief",
+      "pengukuran-action-string-height",
+      "fret-buzz",
+      "terminologi-intonasi",
+    ],
+    sources: [
+      {
+        title: "Fender Acoustic Guitar Setup Guide (structural reference)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference for acoustic setup principles. Not a universal rule; instrument-dependent.",
+      },
+      {
+        title: "Gibson Acoustic Guitar Setup Documentation (structural reference)",
+        tier: "primary" as const,
+        author: "Gibson",
+        publisher: "Gibson",
+        accessDate: "2026-08-28",
+        note: "Reference for comparison. Specific values vary per model.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "concept",
+      apaItu:
+        "Setup gitar akustik adalah proses penyesuaian parameter instrumen pada gitar akustik — meliputi neck relief, action (ketinggian senar), dan intonasi. Secara prinsip sama dengan setup gitar elektrik, namun gitar akustik memiliki tantangan tambahan: body yang lebih besar, bracing internal, saddle berbasis kayu atau tulang (bukan metal saddle), dan sensitivitas tinggi terhadap perubahan suhu dan kelembapan. Gitar akustik tanpa elektronik juga tidak memiliki preamp untuk mengoreksi masalah setup melalui EQ — sehingga akurasi setup lebih kritis untuk kualitas suara.",
+      fungsi:
+        "Fungsi setup akustik: memastikan gitar menghasilkan volume optimal, nada bersih di seluruh fret, dan nyaman dimainkan. Gitar akustik yang disetel dengan baik akan memiliki projection yang baik tanpa buzz, serta string action yang sesuai gaya bermain — baik strumming maupun fingerpicking. Berbeda dengan elektrik, masalah setup pada akustik lebih sulit dikompensasi dengan amplifier karena karakter suara akustik sangat bergantung pada resonansi body secara fisik.",
+      hubunganDengan: [
+        "apa-itu-setup-gitar",
+        "pengukuran-neck-relief",
+        "pengukuran-action-string-height",
+        "fret-buzz",
+        "terminologi-intonasi",
+      ],
+    },
+  },
+
+  // ── 12. service — Setup Dasar Bass ─────────────────────────────────────────
+  {
+    id: "art-service-bass-001",
+    slug: "service-setup-dasar-bass",
+    title: "Service: Setup Dasar Bass Guitar",
+    description:
+      "Layanan setup dasar untuk bass guitar — pengecekan neck relief, action, intonasi, dan pickup height. Prinsip sama dengan gitar elektrik dengan pertimbangan scale length lebih panjang dan senar yang lebih berat.",
+    category: "bass",
+    domains: ["professional-services", "setup", "maintenance"],
+    contentType: "service",
+    difficulty: "pemula",
+    readingMinutes: 5,
+    status: "draft",
+    related: [
+      "apa-itu-setup-gitar",
+      "service-setup-dasar-gitar-elektrik",
+      "pengukuran-neck-relief",
+      "pengukuran-action-string-height",
+    ],
+    sources: [
+      {
+        title: "Fender Bass Guitar Setup Guide (structural reference)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Used as structural reference. Scale length and string gauge considerations differ per bass model.",
+      },
+      {
+        title: "Yamaha Bass Guitar Service Documentation (structural reference)",
+        tier: "primary" as const,
+        author: "Yamaha",
+        publisher: "Yamaha",
+        accessDate: "2026-08-28",
+        note: "Reference for comparison. Specific values vary per model.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "service",
+      apaItu:
+        "Setup dasar bass guitar adalah layanan servis untuk memastikan bass bermain dengan nyaman, sound konsisten, dan intonasi akurat. Secara prinsip mirip dengan setup gitar elektrik, namun ada perbedaan penting: scale length bass lebih panjang (umumnya 34 inci, dibanding 25.5 inci pada gitar elektrik), senar bass umumnya lebih berat (gauge lebih besar), dan bass biasanya menggunakan pickup electromagnetic (jazz bass, precision bass style) yang height-adjustable. Bass dengan active elektronik juga memerlukan pengecekan baterai dan EQ settings sebagai bagian dari setup.",
+      mencakup: [
+        "Pemeriksaan dan penyesuaian neck relief (truss rod) — prinsip sama dengan gitar elektrik, namun sensitivitas berbeda karena scale lebih panjang",
+        "Pemeriksaan dan penyesuaian action (string height) di bridge",
+        "Pemeriksaan dan penyesuaian intonasi (panjang saddle)",
+        "Pemeriksaan pickup height dan polaritas (bass pickup bisa lebih sensitif terhadap adjustment dibanding gitar)",
+        "Pemeriksaan kondisi nut dan bridge saddle",
+        "Pemeriksaan electronics untuk bass aktif (baterai, preamp, EQ)",
+        "Pemeriksaan hardware (tuner, strap pin, output jack)",
+      ],
+      durasi:
+        "Durasi setup bass bervariasi: 45-90 menit untuk bass yang kondisinya baik; 1.5-3 jam jika ada penyesuaian signifikan. Bass dengan active elektronik memerlukan waktu tambahan untuk pemeriksaan elektronik.",
+      tools: [
+        "Truss rod wrench (sesuai ukuran nut bass)",
+        "Feeler gauge (pengukur celah)",
+        "Screwdriver set (presisi)",
+        "Tuner elektronik (bass-tuned)",
+        "Multimeter (untuk bass aktif — pemeriksaan baterai dan grounding)",
+        "String winder",
+        "Cleaning supplies",
+      ],
+      proses:
+        "Proses setup bass (urutan umum): (1) Inspeksi awal — kondisi umum, body, neck, hardware, elektronik. (2) Pemeriksaan neck relief — capo di fret 1, tekan senar di fret terakhir, ukur celah. (3) Periksa action di bridge — ukur di bass side dan treble side. (4) Periksa intonasi — bandingkan nada open string dengan fret ke-12. (5) Periksa pickup height — sesuaikan sesuai preferensi dan jenis pickup. (6) Untuk bass aktif: periksa baterai, grounding, dan fungsi preamp. (7) Test play — periksa seluruh fret, buzz, dan kualitas sound. (8) Rekomendasi senar jika diperlukan.",
+      risiko:
+        "Risiko setup bass: (1) Truss rod bass sensitivity berbeda dari gitar elektrik karena scale lebih panjang — putar bertahap dan ukur ulang. (2) Saddle bass biasanya lebih besar dan terbuat dari bahan berbeda — penyesuaian harus lebih hati-hati. (3) Bass aktif memerlukan penanganan elektronik yang benar — salah cabut kabel bisa menyebabkan short. (4) Pickup height yang terlalu tinggi bisa menghasilkan distorsi pada amplifier.",
+      lihatProfesional:
+        "Bawa ke teknisi profesional untuk setup bass jika: (1) Bass aktif memerlukan pemeriksaan elektronik yang benar. (2) Neck reset atau body repair diperlukan. (3) Pickup atau preamp bermasalah. (4) Bass adalah model langka atau vintage yang memerlukan penanganan khusus.",
+      topikTerkait: [
+        "apa-itu-setup-gitar",
+        "service-setup-dasar-gitar-elektrik",
+        "pengukuran-neck-relief",
+        "pengukuran-action-string-height",
+      ],
     },
   },
 ];
