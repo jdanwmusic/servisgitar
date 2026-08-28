@@ -1,0 +1,10 @@
+# .gitignore — SERVICEGITAR.COM
+node_modules/
+.next/
+out/
+dist/
+.env*
+*.log
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts

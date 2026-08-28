@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html, body {
+    background-color: #0A0A0C;
+    color: #E8E8F0;
+    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #C9A84C;
+    color: #0A0A0C;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-brand {
+    @apply inline-flex items-center justify-center gap-2 rounded-md
+           bg-gradient-brand px-5 py-2.5 text-sm font-semibold
+           text-brand-bg shadow-gold-sm
+           transition-all duration-200
+           hover:shadow-gold-md hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md
+           border border-brand-border bg-brand-surface/60 px-5 py-2.5
+           text-sm font-medium text-brand-text-primary
+           backdrop-blur-sm
+           transition-all duration-200
+           hover:border-brand-accent/40 hover:bg-brand-surface
+           hover:text-brand-accent;
+  }
+
+  .link-underline {
+    @apply relative text-brand-text transition-colors duration-150
+           hover:text-brand-accent
+           after:absolute after:left-0 after:-bottom-1 after:h-px
+           after:w-0 after:bg-brand-accent after:transition-all
+           after:duration-200
+           hover:after:w-full;
+  }
+}
