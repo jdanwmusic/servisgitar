@@ -676,9 +676,125 @@ export const ARTICLES: Article[] = [
       "apa-itu-setup-bass",
       "pengukuran-neck-relief",
     ],
+  },  // body close
+  },  // article close
+  // ── 14. problem — Dead Note ───────────────────────────────────────────────
+  {
+    id: "art-problem-deadnote-001",
+    slug: "dead-note-bass",
+    title: "Apa Penyebab Dead Note pada Bass Guitar?",
+    description: "Penyebab umum dead note (nada mati) pada bass guitar dan cara mendiagnosis serta perbaikannya.",
+    category: "bass",
+    domains: ["problems", "diagnosis", "setup"],
+    contentType: "problem",
+    difficulty: "menengah",
+    readingMinutes: 6,
+    status: "draft",
+    related: ["pengukuran-neck-relief", "pengukuran-action-string-height", "service-setup-dasar-bass", "tuning-instability-bass"],
+    sources: [
+      {
+        title: "Fender Bass Setup Guide (structural reference)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments Corporation",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Manufacturer official documentation. Dead note causes vary per bass model and setup.",
+      },
+      {
+        title: "Yamaha Bass Service Documentation (structural reference)",
+        tier: "primary" as const,
+        author: "Yamaha Corporation",
+        publisher: "Yamaha",
+        accessDate: "2026-08-28",
+        note: "Reference for bass-specific dead note patterns and setup dependencies.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "problem",
+      apaItu: "Dead note (atau 'dead spot') pada bass guitar adalah kondisi di saat mengeksekusi sebuah nada (secara umum di fret tengah ke atas pada leher), nada tersebut terdengar 'mati' atau sangat reduc sehingga tidak dapat dikeluarkan dengan benar, meskipun senar terpension dengan baik. Kondisi ini berbeda dengan fret buzz — dead note terjadi ketika nampak tidak ada getaran suara pada fret tertentu tanpa adanya gangguan percikan, sedangkan buzz adalah gangguan akustik. Dead note biasanya disebabkan oleh: (1) Nut yang aus atau tidak rata yang menyebabkan senar 'macet' di slot nut, (2) Fret tidak rata (uneven frets) di area fret yang bersangkutan, (3) Saddle yang tidak tepat atau tidak seimbang, (4) Polarisasi pickup yang tidak seimbang (khusus untuk bass aktif), (5) Kondisi kayu leher yang mengalami warping atau backbow yang signifikan.",
+      gejala: "Gejala dead note: (1) Ketika ditekan pada fret tertentu, nada tidak terdengar atau sangat minim, (2) Senar terlihat bergoyang (vibrate) namun suara tidak keluar, (3) Masalah hanya muncul pada fret atau area tertentu pada leher, (4) Masalahnya tidak berhubungan dengan volume atau distorsi.",
+      penyebab: [
+        "Neck relief (kelengkungan leher) yang tidak sesuai — bisa terlalu datar atau melengkung ke depan (backbow)",
+        "Nut yang aus atau tidak rata — senar 'macet' di slot nut dan tidak bergerak bebas saat ditekan di fret 1-3 atau penggunaan tremolo",
+        "Fret tidak rata (uneven frets) — beberapa fret lebih tinggi dari lainnya di area tertentu pada leher, menyebabkan kontak dengan senar pada area tertentu",
+        "Saddle yang aus atau tidak seimbang — menyebabkan senar terlalu rendah di area tertentu pada leher",
+        "Elektronika bass aktif — ketegangan dayar/polarisasi pickup yang tidak seimbang dapat menyebabkan pembatalan frekuensi pada fret tertentu",
+        "Kondisi kayu leher yang berubah karena perubahan suhu/kelembapan (cuaca/travel) — pada bass ini sangat umum karena scale length yang lebih panjang"
+      ],
+      diagnosis: "Langkah diagnosis dead note (urutan dari penyebab yang paling umum hingga yang paling jarang): (1) Periksa nut: jika senar 'bouncing' kembali saat ditekan di fret 1-3, atau ada tanda senar 'macet' di slot nut, nut perlu diperiksa atau difile. (2) Periksa fret: menggunakan fret rocker pada kombinasi 3 fret berurutan di area fret mati — letakkan fret rocker dan lihat apakah ada celah di fret tengah. (3) Periksa saddle: pastikan saddle tidak aus dan ketinggiannya seimbang. (4) Periksa pickup: pada bass aktif, cek grounding, baterai, dan polaritas penguatan. (5) Periksa neck relief: ukur dengan capo di fret 1 dan menekan senar di fret terakhir, ukur celah di fret ke-7 atau ke-9. Penting: jika dead note hanya muncul pada 1-2 fret tertentu kemungkinan besar masalahnya adalah fret yang tidak rata, bukan relief atau nut.",
+      pengukuran: "Untuk dead note: (1) Periksa nut dengan menggeser senar di slot — apakah ada 'play' atau 'stuck'? (2) Pakai fret rocker pada 3 fret berurutan di area mati — lihat celah. (3) Ukur neck relief standar sebagai referensi. (4) Pada bass aktif: cek grounding baterai dan polaritas penguatan. Catatan: dead note pada fret 1-3 umumnya nut-related; dead note pada fret tengah-ke-atas umumnya fret-related atau saddle-related. Selalu kombinasi diagnosis nut + fret + saddle + eletronik.",
+      proses: "Langkah perbaikan dead note: (1) Nut: jika senar macet di slot nut, lumasi dengan graphite lubricant atau parafin. Jika aus/tidak rata, bawa ke teknisi untuk difile atau diganti. (2) Fret: gunakan fret rocker untuk menemukan fret yang tidak rata. Jika ditemukan, bawa ke teknisi untuk fret leveling — jangan coba sendiri. (3) Saddle: cek ketinggian dan keseimbangan. Sesuaikan dengan hex key jika memungkinkan, namun hati-hati jangan sampai terlalu rendah. (4) Bass aktif: ganti baterai, cek grounding, periksa polaritas pickup. (5) Neck relief: jika perlu penyesuaian, putar truss rod 1/4 langkah pada satu waktu dan ukur ulang. PENTING: setiap langkah memerlukan pengukuran ulang sebelum melanjutkan ke langkah berikutnya.",
+      tools: ["Feeler gauge (pengukur celah)", "Fret rocker (alat diagnostik fret)", "Capo (opsional, untuk pengukuran neck relief)", "Tuner elektronik (untuk memastikan senar dalam tune saat pengukuran)", "Nut file (jika nut perlu disesuaikan — biasanya untuk teknisi)"],
+      risiko: "Risiko utama dari perbaikan dead note: (1) Nut yang difile terlalu lebar/dalam merusak nut secara permanen (perlu diganti). (2) Fret leveling yang tidak tepat dapat merusak fret secara permanen. (3) Penyesuaian saddle yang berlebihan dapat mempengaruhi intonasi. (4) Penyesuaian truss rod tanpa diagnosis yang benar justru memperburuk kondisi dead note. PENTING: Setiap penyesuaian pada truss rod atau nut harus dilakukan dengan hati-hati dan diukur ulang sebelum langkah berikutnya — penyesuaian yang berlebihan dapat merusak leher atau nut secara permanen.",
+      lihatProfesional: "Bawa ke teknisi profesional jika: (1) Dead note terus memerlukan nut difile atau penggantian. (2) Ditemukan fret yang tidak rata dengan fret rocker (leveling biasanya memerlukan alat dan teknik khusus). (3) Neck menunjukkan perubahan bentuk yang signifikan (twisted neck, severe backbow). (4) Nut atau saddle perlu diganti (sering memerlukan komponen khusus). (5) Dead note tetap ada setelah semua langkah dasar dilakukan. (6) Bass aktif memerlukan pemeriksaan elektronik yang spesifik.",
+      topikTerkait: [
+        "pengukuran-neck-relief",
+        "service-setup-dasar-bass",
+        "tuning-instability-bass",
+        "apa-itu-setup-bass",
+      ],
+    },
   },
+  // ── 15. problem — Tuning Instability ───────────────────────────────────────
+  {
+    id: "art-problem-tuning-002",
+    slug: "tuning-instability-bass",
+    title: "Cara Mengatasi Tuning Instability pada Bass Guitar",
+    description: "Mengapa bass guitar tidak stabil dalam tune? Penyebab umum tuning instability dan cara mendiagnosis serta perbaikannya.",
+    category: "bass",
+    domains: ["problems", "diagnosis", "setup"],
+    contentType: "problem",
+    difficulty: "menengah",
+    readingMinutes: 6,
+    status: "draft",
+    related: ["pengukuran-neck-relief", "service-setup-dasar-bass", "dead-note-bass", "apa-itu-setup-bass"],
+    sources: [
+      {
+        title: "Fender Bass Setup Guide (structural reference — tuning stability)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments Corporation",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Manufacturer official documentation. Tuning stability varies per bass model, string gauge, and setup quality.",
+      },
+      {
+        title: "D'Addario String Manufacturer Guide (tuning stability)",
+        tier: "primary" as const,
+        author: "D'Addario",
+        publisher: "D'Addario",
+        accessDate: "2026-08-28",
+        note: "Tier 1 source for string-related tuning stability guidance.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "problem",
+      apaItu: "Tuning instability (ketidakstabilan penalaan) pada bass guitar adalah kondisi di saat bass tidak dapat mempertahankan penalaan yang sudah diatur — guitar cepat 'naik turun' sendiri, terutama setelah pemetikan keras, penggunaan tremolo (jika ada), atau perubahan kondisi lingkungan (suhu, kelembapan). Kondisi ini berbeda dengan dead note — tuning instability senar tetap terdengar namun naik turun, sedangkan dead note hampir tidak terdengar. Penyebab tuning instability pada bass meliputi: (1) Senar baru yang belum stabil, (2) Nut yang terlalu ketat atau aus, (3) String trees atau tuner yang longgar, (4) Bridge atau saddle yang aus/tidak stabil (khusus tremolo), (5) Tremolo springs yang perlu diseimbangkan, (6) Perubahan suhu dan kelembapan yang signifikan yang memengaruhi kayu dan senar bass.",
+      gejala: "Gejala tuning instability: (1) Gitar cepat 'naik' ke nada yang lebih tinggi setelah pemetikan keras atau penggunaan tremolo. (2) Gitar 'turun' secara perlahan setelah beberapa menit. (3) Tuning tidak stabil saat pindah dari fret rendah ke fret tinggi. (4) Tuning berubah signifikan saat volume/distortion dinaikkan (khusus bass dengan pickup sensitif).",
+      penyebab: [
+        "Senar baru — senar yang baru dipasang belum stabil dan biasanya memerlukan beberapa kali stretching (menarik senar dengan lembut) sebelum tuning stabil",
+        "Nut yang terlalu ketat atau aus — senar 'macet' di slot nut dan tidak bergerak bebas saat tuning atau penggunaan tremolo",
+        "String trees atau tuner yang longgar — komponen penahan senar tidak cukup kencang",
+        "Bridge atau saddle yang aus/tidak stabil — terutama pada bass dengan tremolo yang sudah lama",
+        "Tremolo springs yang perlu diseimbangkan (pada bass dengan tremolo)",
+        "Perubahan suhu dan kelembapan yang signifikan — kayu dan senar bereaksi terhadap perubahan lingkungan",
+        "Penggunaan jenis senar yang tidak sesuai (sangat ringan atau sangat berat) tanpa sesuaianya dengan scale length dan tension bass"
+      ],
+      diagnosis: "Langkah diagnosis tuning instability: (1) Periksa kondisi senar — senar baru perlu stretching berulang kali selama beberapa hari. (2) Periksa nut: jika senar 'bouncing' kembali saat ditekan di fret 1-3, atau ada tanda senar 'macet' di slot, nut perlu diperiksa atau difile. (3) Periksa tuner: pastikan mur tuner cukup kencang. (4) Pada gitar dengan tremolo: periksa keseimbangan springs di belakang body. (5) Pada masalah lingkungan: simpan gitar di tempat dengan suhu/kelembapan stabil, gunakan humidifier/dehumidifier sesuai kebutuhan. Penting: jika tuning stabil setelah stretching senar baru selama 3-5 hari, maka penyebabnya adalah senar baru. Jika tetap tidak stabil, lanjut ke langkah nut/tuner/bridge.",
+      pengukuran: "Pengukuran tuning stability: (1) Setelah tuning, tarik senar dengan lembut beberapa kali (stretching), re-tune, ulangi selama beberapa hari. (2) Catat perubahan tuning setiap hari. (3) Bandingkan stability antara senar baru vs senar lama. (4) Pada bass dengan tremolo: cek keseimbangan springs. (5) Pada bass aktif: cek grounding, baterai, dan fungsi preamp. Catatan: jangka waktu stabilisasi berbeda per jenis senar dan scale length — bass 4-string biasanya butuh 3-5 hari, bass 5+ butuh 5-7 hari.",
+      proses: "Langkah perbaikan tuning instability: (1) Senar baru: stretching berulang selama 3-5 hari — tarik senar dengan lembut ke atas setelah tune, re-tune, ulangi 5-10 kali per senar setiap hari selama beberapa hari. (2) Nut: jika senar macet, lumasi slot nut dengan graphite lubricant atau parafin. Jangan gunakan oli atau WD-40. (3) Tuner: pastikan mur tuner kencang. Jika longgar, kencangkan dengan obeng atau kunci yang sesuai. (4) Tremolo: cek keseimbangan springs di belakang body — jika bass menggunakan tremolo, lihat panduan penyesuaian khusus untuk model tersebut. (5) Lingkungan: simpan bass di ruangan dengan suhu dan kelembapan stabil (ideal: 20-24°C, 45-55% RH). PENTING: jika tuning stabil setelah stretching senar 3-5 hari, penyebabnya adalah senar baru, bukan masalah mekanis.",
+      tools: ["Tuner elektronik (untuk akurasi tuning)", "String winder (mempercepat penggantian senar)", "Kunci/L-key (untuk mur tuner)", "String cutting pliers (jika perlu memotong senar)", "Humidifier / dehumidifier (jika lingkungan tidak stabil)"],
+      risiko: "Risiko perbaikan tuning instability: (1) Nut yang difile terlalu lebar/dalam merusak nut secara permanen (perlu diganti). (2) String trees yang disetel dengan tegang berlebihan dapat merusak senar. (3) Lubrication dengan bahan yang salah (misalnya oli) justru dapat merusak kayu nut. (4) Penyesuaian truss rod tanpa diagnosis yang benar justru memperburuk tuning stability. PENTING: Setiap penyesuaian pada truss rod, nut, atau saddle harus dilakukan dengan hati-hati dan diukur ulang sebelum langkah berikutnya — penyesuaian yang berlebihan dapat merusak leher atau nut secara permanen.",
+      lihatProfesional: "Bawa ke teknisi jika: (1) Nut perlu difile (butuh presisi tinggi). (2) Bridge/tremolo perlu diservis. (3) Tuning tetap tidak stabil setelah semua langkah dasar (stretching senar, pengecekan nut/tuner) dilakukan. (4) Bass aktif memerlukan pemeriksaan elektronik.",
+      topikTerkait: [
+        "service-setup-dasar-bass",
+        "dead-note-bass",
+        "apa-itu-setup-bass",
+        "pengukuran-neck-relief",
+      ],
+    },
   },
-
 ];
 
 export const ARTICLES_BY_SLUG: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
