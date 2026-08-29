@@ -23,11 +23,17 @@
   <url><loc>https://servisgitar.com/panduan/terminologi-fret-leveling</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://servisgitar.com/panduan/terminologi-intonasi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://servisgitar.com/panduan/service-setup-dasar-gitar-elektrik</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://servisgitar.com/panduan/apa-itu-setup-gitar-akustik</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://servisgitar.com/panduan/service-setup-dasar-bass</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://servisgitar.com/panduan/apa-itu-setup-bass</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://servisgitar.com/layanan</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-<url><loc>https://servisgitar.com/kontak</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-<url><loc>https://servisgitar.com/search</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://servisgitar.com/404</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://servisgitar.com/panduan/apa-itu-setup-gitar-akustik</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/service-setup-dasar-bass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/apa-itu-setup-bass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/pengukuran-action-string-akustik</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/masalah-fret-buzz-akustik</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/terminologi-scale-length-bass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/pengukuran-action-bass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/dead-note-bass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/panduan/tuning-instability-bass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/layanan</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://servisgitar.com/kontak</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://servisgitar.com/search</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://servisgitar.com/404</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 </urlset>
