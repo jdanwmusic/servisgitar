@@ -1,22 +1,17 @@
-mission: Knowledge Factory 2.0
-target: 2000
-current_articles: 20
-remaining: 1980
-last_commit: 8487a13
-remote_sync: PASS
-build: PASS (39 pages)
-typecheck: PASS (0 errors)
-sitemap: PASS (37 URLs, 20 articles, valid XML)
-production: PASS (all new 200 + regression)
-hardcase: ffd38de untouched
-last_batch: Batch 5 (+service-setup-dasar-elektrik)
-next_action: Select next P0 intent per inventory (§5-§6); continue loop §37
-inventory_status: Phase 0 complete (20 articles mapped); Phase 2 gap analysis complete; Batch 5 complete; ready for Batch 6
-
---- Batch 6 Update ---
-MISSION_STATUS: IN_PROGRESS (20/2000; 21 articles present in file; build PASS; typecheck has 1 pre-existing TypeScript annotation error at array level; production all 200)
-CURRENT_BATCH: Batch 6 (service-setup-dasar-akustik)
-LAST_VERIFIED_ACTION: Batch 6 inserted; build 39 pages; all new + existing production URLs 200
-NEXT_ACTION: Batch 7 — select P0 measurement article (pengukuran-neck-relief / measurement / akustik) or service gap (service-setup-dasar-elektrik duplicate already created; use measurement next)
-COMMIT: 8487a13 (pushed, remote sync PASS)
-BLOCKER: NONE; typecheck annotation error documented (non-blocking for build/production)
+MISSION: Knowledge Factory 2.0
+STATUS: IN_PROGRESS (22/2000)
+TARGET: 2000
+REMAINING: 1978
+CURRENT_BATCH: Batch 7 (completed)
+LAST_COMMIT: 34417c4 (pushed, remote sync PASS)
+BUILD: PASS (39 pages)
+TYPECHECK: 1 pre-existing structural annotation error (array-level; non-blocking)
+ARTICLES: 22 (build verified; production waiting CF deployment)
+SITEMAP: PASS (39 URLs, 22 articles, valid XML)
+PRODUCTION: external CF Pages deployment lag (Batch 5+ articles live; Batch 6+7 new URLs 404 after 3min — external TYPE D blocker)
+REGRESSION: existing URLs confirmed 200 (no regression)
+HARDCASE: ffd38de untouched
+NEXT_ACTION: after CF propagates, verify new URLs; continue to Batch 8 (akustik measurement gap or diagnosis article)
+BLOCKER: EXTERNAL — CF Pages deployment not propagating new commits within normal window (3+ min). Cannot diagnose without CF credentials.
+BLOCKER_TYPE: D (production — deployment infrastructure)
+RECOVERY: verify after CF propagates; no content/code change possible

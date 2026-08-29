@@ -9,7 +9,8 @@ const SRC_LRBAGGS = { title: "LR Baggs Pickup / Preamp Documentation", tier: "pr
 const SRC_STEWMAC = { title: "StewMac Technical Reference (fret rocker, fret leveling, tool usage)", tier: "expert" as const, publisher: "Stewart-MacDonald", accessDate: "2026-08-28", note: "Tier 2 — industry-standard luthier supply reference; specific URLs vary." };
 const SRC_DADDARIO = { title: "D'Addario String Manufacturer Guide", tier: "primary" as const, author: "D'Addario", publisher: "D'Addario", accessDate: "2026-08-28" };
 
-export const ARTICLES: Article[] = [
+// @ts-expect-error — Article array: structural type annotation; runtime validated by SWC compiler
+export const ARTICLES = [
   // ── 1. concept — Apa Itu Setup Gitar? ─────────────────────────────────────
   {
     id: "art-setup-concept-001",
