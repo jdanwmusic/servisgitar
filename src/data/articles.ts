@@ -540,6 +540,11 @@ export const ARTICLES: Article[] = [
     "Penjelasan penyebab, observasi aman, dan langkah penyelesaian untuk fret buzz khusus pada gitar akustik — termasuk perbedaan dari gitar elektrik karena tidak selalu memiliki easy-access truss rod adjustment.",
   category: "akustik",
   domains: ["problems", "diagnosis", "setup"],
+    visual: {
+      kind: "problem",
+      alt: "Diagram identifikasi dead fret / fret buzz: posisi fret yang menghasilkan bunyi tidak jelas saat senar dipetik.",
+      caption: "Gambar 1: Fret yang menghasilkan buzz teridentifikasi secara lokal. Pengukuran dengan feeler gauge membantu memastikan sumber.",
+    },
   contentType: "problem",
   difficulty: "pemula",
   readingMinutes: 6,
@@ -583,11 +588,6 @@ export const ARTICLES: Article[] = [
       "pengukuran-neck-relief",
       "apa-itu-setup-gitar-akustik",
     ],
-  },
-  visual: {
-    kind: "problem",
-    alt: "Ilustrasi area frebuzz pada fretboard gitar akustik: lokasi masalah, observasi aman, dan langkah diagnosis tanpa membuat diagnosis pasti.",
-    caption: "Gambar 2: Area fretbuzz pada fretboard gitar akustik. Observasi aman pertama: periksa apakah buzz satu fret atau menyebar, satu senar atau semua.",
   },
   },
 
@@ -976,7 +976,7 @@ export const ARTICLES: Article[] = [
       caraMengukur: "Tuning gitar terlebih dahulu. Pasang capo di fret 1 (saat mengukur di fret 12). Ukur jarak senar ke fret 12 di bass side (E/A) dan treble side (high E) menggunakan feeler gauge atau ruler presisi. Catat nilai. Ukur juga jarak senar ke fret pertama dengan capo di fret 1. Bandingkan dengan preferensi pemain. Catat kondisi: senar yang baru diganti biasanya sedikit lebih rendah sampai stabil.",
       tools: ["Feeler gauge (pengukur celah presisi)", "Ruler presisi atau caliper digital", "Capo (opsional, untuk pengukuran di fret 1)", "Tuner elektronik (untuk akurasi tuning)"],
       interpretasi: "Nilai action elektrik sangat bergantung pada preferensi pemain dan gaya bermain. Gaya fingerstyle biasanya action lebih rendah, pick lebih tinggi, bending action lebih tinggi. Les Paul (short scale) mungkin sedikit action lebih rendah dari Stratocaster. Tidak ada nilai universal; pemain dapat menentukan sesuai kenyamanan mereka.",
-      topikRelated: [
+      topikTerkait: [
         "apa-itu-setup-gitar",
         "pengukuran-action-string-height",
         "pengukuran-neck-relief",
