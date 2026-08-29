@@ -795,6 +795,74 @@ export const ARTICLES: Article[] = [
       ],
     },
   },
+
+  // ── 20. service — Setup Dasar Elektrik ──────────────────────────────────────
+  {
+    id: "art-service-elektrik-001",
+    slug: "service-setup-dasar-elektrik",
+    title: "Layanan Service Setup Dasar Gitar Elektrik",
+    description: "Layanan setup dasar untuk gitar elektrik — pemeriksaan dan penyesuaian neck relief, action, intonasi, nut, pickup, dan tremolo.",
+    category: "elektrik",
+    domains: ["setup", "maintenance", "professional-services"],
+    contentType: "service",
+    difficulty: "pemula",
+    readingMinutes: 5,
+    status: "draft",
+    related: [
+      "apa-itu-setup-gitar",
+      "pengukuran-neck-relief",
+      "pengukuran-action-string-height",
+      "terminologi-intonasi",
+      "service-setup-dasar-gitar-elektrik",
+    ],
+    sources: [
+      {
+        title: "Fender Electric Guitar Setup Guide (structural reference)",
+        tier: "primary" as const,
+        author: "Fender Musical Instruments Corporation",
+        publisher: "Fender",
+        accessDate: "2026-08-28",
+        note: "Manufacturer official documentation. Setup procedure for electric guitar differs from acoustic due to scale length, string gauge, and electronics.",
+      },
+      {
+        title: "Yamaha Pacifica Service Documentation (structural reference)",
+        tier: "primary" as const,
+        author: "Yamaha Corporation",
+        publisher: "Yamaha",
+        accessDate: "2026-08-28",
+        note: "Reference for electric guitar-specific setup steps and component checks.",
+      },
+    ],
+    updatedAt: "2026-08-28",
+    body: {
+      contentType: "service",
+      apaItu: "Service setup dasar gitar elektrik adalah layanan pemeriksaan dan penyesuaian komponen utama gitar elektrik untuk memastikan instrumen bermain dengan optimal. Berbeda dari akustik, gitar elektrik memiliki komponen elektronik (pickup, potensio, switch) dan mekanis (tremolo, locking tuner) yang memerlukan perhatian khusus. Setup dasar elektrik mencakup pemeriksaan dan penyesuaian neck relief, action senar di bridge, intonasi, kondisi nut, ketinggian pickup, serta fungsi tremolo dan elektronik.",
+      mencakup: [
+        "Pemeriksaan dan penyesuaian neck relief (truss rod) — sesuai kondisi instrumen dan preferensi pemain",
+        "Pemeriksaan dan penyesuaian ketinggian senar (action) di bridge atau tremolo",
+        "Pemeriksaan dan penyesuaian intonasi (panjang saddle atau bridge)",
+        "Pemeriksaan kondisi nut — keausan, kedalaman slot, dan kelancaran senar",
+        "Pemeriksaan ketinggian dan polarisasi pickup",
+        "Pemeriksaan fungsi tremolo jika ada — keseimbangan springs dan stabilitas",
+        "Pemeriksaan kondisi elektronik — potensio, switch, jack output",
+        "Pemeriksaan dan pengencangan hardware — tuner, bridge, strap pin",
+        "Pembersihan umum — fret, body, hardware",
+      ],
+      durasi: "Setup dasar gitar elektrik umumnya 30-90 menit, tergantung kondisi instrumen dan kompleksitas penyesuaian. Gitar dengan tremolo memerlukan waktu tambahan untuk keseimbangan springs. Gitar dengan kondisi baik dan tanpa tremolo biasanya selesai dalam 30-45 menit.",
+      tools: ["Truss rod wrench (sesuai ukuran)", "Feeler gauge (pengukur celah)", "Hex key set (berbagai ukuran)", "Screwdriver set (presisi)", "Tuner elektronik atau strobe tuner", "String winder", "Multimeter (untuk pemeriksaan elektronik)", "Cleaning supplies (kain, fret cleaner, contact cleaner)", "Nut files (jika nut perlu disesuaikan — untuk teknisi)"],
+      proses: "Proses setup dasar elektrik (urutan umum): (1) Inspeksi awal — periksa kondisi umum, fret, hardware, dan elektronik. (2) Pemeriksaan elektronik dasar — tes jack output, potensio, dan switch. (3) Pemeriksaan neck relief — ukur dengan capo di fret 1, tekan di fret terakhir, ukur celah di fret 7-9. (4) Penyesuaian truss rod jika perlu. (5) Pemeriksaan dan penyesuaian action di bridge atau tremolo. (6) Pemeriksaan dan penyesuaian intonasi. (7) Pemeriksaan kondisi nut. (8) Pemeriksaan pickup — ketinggian dan polarisasi. (9) Pemeriksaan tremolo jika ada. (10) Pembersihan. (11) Test play — periksa seluruh fret, fret buzz, dan tuning stability.",
+      risiko: "Risiko setup elektrik: (1) Truss rod yang diputar berlebihan dapat merusak leher secara permanen. (2) Pickup height yang terlalu tinggi dapat merusak pickup atau membuat senar terlalu dekat dengan pickup. (3) Saddle atau bridge yang disesuaikan terlalu rendah tidak bisa dikembalikan. (4) Nut yang difile terlalu lebar merusak nut secara permanen. (5) Tremolo floating yang disetel salah dapat membuat gitar tidak bisa di-tune. (6) Penggunaan contact cleaner yang berlebihan pada potensio bisa merusak komponen. Teknisi berpengalaman biasanya mendiskusikan preferensi pemain sebelum penyesuaian besar.",
+      lihatProfesional: "Bawa ke teknisi profesional untuk setup dasar elektrik — layanan ini ditawarkan oleh toko musik, luthier, atau teknisi servis gitar. Elektrik dengan tremolo (Floyd Rose, Edge, dll.) memerlukan teknisi berpengalaman dengan sistem tremolo spesifik. Hindari setup sendiri jika: (1) tidak yakin prosedur truss rod adjustment, (2) tidak memiliki alat yang sesuai, (3) gitar memiliki tremolo locking atau sistem khusus, (4) gitar memiliki elektronik aktif atau custom wiring. Biaya setup dasar elektrik di Indonesia umumnya Rp 150.000 - Rp 400.000 tergantung kompleksitas.",
+      topikTerkait: [
+        "apa-itu-setup-gitar",
+        "pengukuran-neck-relief",
+        "pengukuran-action-string-height",
+        "terminologi-intonasi",
+        "service-setup-dasar-gitar-elektrik",
+      ],
+    },
+  },
+
 ];
 
 export const ARTICLES_BY_SLUG: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
